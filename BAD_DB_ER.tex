@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Databace Entity relations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[a4paper,12pt,landscape]{article}
+
+
+%\begin{document}
+	
+	%\thispagestyle{empty}
+	
+	\usetikzlibrary{positioning}
+	\usetikzlibrary{shadows}
+	
+	%\tikzstyle{every entity} = [fill=MSUgreen!30, draw=black!100]
+	\tikzstyle{every attribute} = [node distance=1cm]
+	%\tikzstyle{every attribute} = [fill=MSUorange!30, draw=black!100, node distance=1cm]
+	%\tikzstyle{every relationship} = [fill=MSUPurple!30, draw=black!100]
+	%\tikzstyle{every isa} = [fill=MSUgreenBlue!50, draw=black!100]
+	
+	\centering
+	\scalebox{.5}{
+		\begin{tikzpicture}[node distance=1.5cm, every edge/.style={link}]
+		
+		\node[entity] (obj) {Object};
+		\node[attribute] (ename) [above=of obj] {Name} edge (obj);
+		\node[attribute] (code) [above right=of obj] {\key{Bar code}} edge (obj);
+		
+		\node[isa] (isa) [below=1cm of obj] {IS A} edge (obj);
+		
+		\node[entity] (loc) [below left=2cm of isa] {Location} edge (isa);%mec
+		
+		\node[entity] (eqp) [below right=2cm of isa] {Equipment} edge (isa);%sal
+		
+		
+		\node[relationship] (has) [left=of eqp,right=1.1cm of loc] {Has} edge (loc);
+		\draw[link] (has) (has) edge [->] (eqp);
+		
+		\node[relationship] (ask) [left=of obj] {Asks} edge (obj);
+		\node[entity] (qus) [left=of ask] {Questions} edge [<-] (ask);
+		\node[attribute] (tex) [above=of qus] {Question Text} edge (qus);
+
+		\node[relationship] (get) [left=of qus] {Gets} edge (qus);
+		\node[entity] (res) [below=of get] {Responce} edge [<-] (get);
+		\node[attribute] (val) [above right= of res] {Value} edge (res);
+		\node[attribute] (time) [right= of res] {\key{Time Stamp}} edge (res);
+		\node[attribute] (sub) [below right= of res] {Submiter} edge (res);
+		
+		\end{tikzpicture}
+	}
+	
+%\end{document}

@@ -1,0 +1,164 @@
+\documentclass[Letter,11pt]{article}
+\input{seting_etc.tex}
+
+\begin{document}
+	%make the tile
+	\input{title.tex}
+	%make the abstract
+	\begin{abstract}
+		Design Team 3 as been asked to create a system to keep track of  and ensure complacence for the safety equipment on Arcelormittal's buildings. To do this the team needs to build three septate systems, a collection server scripts to manage a database, generate reports, and send reminder emails. A web based application to allow administrators to add items to a database and perspective tasks. Finlay A Android application to scan bar codes and recode response to assigned question.This project proposal is broken into two parts, first the project is defined in a way that hopefully will do the fowling:
+		\begin{enumerate}
+			\item Demonstrate the teams current understanding of the project.
+			\item Define the project in such a way that it will be.
+			\item Demonstrate that the team has internalized the design challenge faced.
+		\end{enumerate}
+	\end{abstract}
+
+\section{Project Definition}\label{def}
+	
+	\subsection{Scope}\label{scope}
+		\begin{itemize}
+			\item Mobile Application
+			\begin{itemize}
+				\item Off line Mode
+				\item Bar code Scanning
+				\item Bar code based questions
+			\end{itemize}
+			\item Web Application
+			\begin{itemize}
+				\item Add locations to the database
+				\item Add safety equipment types to the database
+				\item Create questions
+				\item Associate Bar codes with:
+				\subitem Locations
+				\subitem Safety equipment
+				\item Associate Locations with:
+				\subitem Safety Equipment
+				\subitem Questions
+				\item Associate safety equipment with
+				\subitem Locations
+				\subitem Questions
+				\item Add Questions to reports
+				\item Create timetable for reports
+				\item Add rcipeants to reports
+			\end{itemize}
+			\item Sever side Database and middle where
+			\begin{itemize}
+				\item Host:
+				\subitem Web application
+				\subitem Database API for mobile app
+				\item Generate and send out reports
+			\end{itemize}
+		\end{itemize}
+	\subsection{Function Definition}
+		In order to justify the existence of items in Part~\ref{scope} the team created a number of function definitions. These definitions were then consolidated into the FAST diagram in Figure~\ref{fast1} along with a more detailed disciption.
+		\begin{figure}[h]
+			\centering
+			\input{FastDG.tex}
+			\caption{\label{fast1} FAST Digram}
+		\end{figure}
+		The Primary function for the project is \textbf{Ensure Compliance} This is the only goal of the project 
+		\begin{itemize}
+			\item
+			
+			\item Keep Recods
+		\end{itemize}
+		
+	\subsection{Data Relations}
+		In order to see something good
+		\begin{figure}[h]
+			\centering
+			\input{DB_ER.tex}
+			\caption{\label{ERdiogram} Database entity relations Diagram}
+		\end{figure}
+		
+	\subsection{Work flow}
+		
+	
+\section{Scheduling}
+		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planed to address a number of the design requirements witch must be develop in or near parallel do to the highly interconnected nature of the individual subsystems. 
+		
+		
+	\subsection{Preliminary Set up}\label{cyc1}
+		In the first cycle the team peruses actions witch move to the understanding of the finer details of the system it has been tasked to build.
+		
+		\begin{itemize}
+			\item\textbf{Meet with Sponsor:}\\
+			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
+			
+			\item \textbf{Solidify Understanding of Project:}\\
+			In this task the Team meats and decuses the what was learned in the 
+			
+			\item\textbf{Additional Questions for Sponsor:}\\
+			
+			\item\textbf{Set up Database:}\\
+			
+			\item\textbf{Hello World on Tablet:}\\
+			
+			\item\textbf{Draw Mock ups:}\\
+			
+			\item\textbf{Set up Web Page:}\\
+			
+			\item\textbf{Ask Clarifying questions for sponsor:}\\
+			
+		\end{itemize}
+		
+		
+		
+	\subsection{Interconnectivity}\label{connect}
+		
+		\begin{itemize}
+			\item\textbf{Web speaks to Database:}\\
+			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
+			
+			\item \textbf{Mobile speaks to Database:}\\
+			In this task the Team meats and decuses the what was learned in the 
+			
+			\item\textbf{Demonstrate to Sponsor:}\\
+			
+			\item\textbf{Mock ups and wireframes:}\\
+			
+		\end{itemize}
+		
+		\subsection{Preliminary Application Development}\label{dev1}
+		
+		\begin{itemize}
+			\item\textbf{Mobile App Development:}\\
+			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
+			
+			\item \textbf{Web App Development:}\\
+			In this task the Team meats and decuses the what was learned in the 
+			
+			\item\textbf{Database Refinements:}\\
+			
+			\item\textbf{Feedback:}\\
+			
+			\item\textbf{New Mock ups:}\\
+			
+		\end{itemize}
+		
+	\subsection{Secondary Application Development}\label{dev2}
+		
+		\begin{itemize}
+			\item\textbf{Mobile App Development:}\\
+			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
+			
+			\item \textbf{Web App Development:}\\
+			In this task the Team meats and decuses the what was learned in the 
+			
+			\item\textbf{Database Refinements:}\\
+			
+			\item\textbf{Make project shippable to sponsor:}\\
+			
+			\item\textbf{New Mock ups:}\\
+			
+		\end{itemize}
+		
+		\begin{landscape}
+			\begin{figure}
+				\input{gantChart.tex}
+				\caption{\label{fig:gant}Gant Chart}
+			\end{figure}
+		\end{landscape}
+	
+\end{document}

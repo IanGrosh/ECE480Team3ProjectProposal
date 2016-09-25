@@ -1,0 +1,83 @@
+%
+% A fairly complicated example from section 2.9 of the package
+% documentation. This reproduces an example from Wikipedia:
+% http://en.wikipedia.org/wiki/Gantt_chart
+%
+\setganttlinklabel{s-s}{}
+\setganttlinklabel{f-s}{}
+\newcommand{\barRed}{bar/.append style={fill=orange, draw=black}}
+
+\noindent\resizebox{1.25\textwidth}{!}{
+\begin{ganttchart}[
+	%canvas/.append style={fill=none, draw=black!5, line width=.75pt}
+	hgrid,
+	vgrid,
+	%compress calendar,
+	%title/.append style={shape=rectangle, fill=gray!10},
+	title height=1,
+	time slot format=middle-endian,
+	bar/.append style={fill=gray!50, draw=black}
+	]{9.13.2016}{11.13.2016}
+	\gantttitlecalendar{month=name, week, day} \\
+	%
+	% Preliminary Set up tasks 'n stuff
+	%
+	\ganttgroup{Preliminary Set up}{9/13/16}{9/22/16} \\
+		\ganttbar{Meet with Sponsor}{9/13/16}{9/13/16} \\
+		\ganttlinkedbar{Solidify Understanding of Project}{9/14/16}{9/20/16} \\
+		\ganttlinkedbar[name=SPcontact2]{Additional Questions for Sponsor}{9/21/16}{9/21/16}\\
+		\ganttbar[name=setupDB]{Set up Database}{9/22/16}{9/22/16}\\% \gantline
+		\ganttbar[name=AppHello]{Hello World on Tablet}{9/22/16}{9/22/16}\\
+		\ganttbar[name=Mock]{Draw Mock ups}{9/22/16}{9/22/16}\\
+		\ganttbar[name=WebSetup]{Set up Web Page}{9/22/16}{9/22/16}\\
+		\ganttbar[name=Clarify]{Ask Clarifying questions for sponsor}{9/22/16}{9/22/16}\\
+		\ganttlink{SPcontact2}{setupDB}
+		\ganttlink[link type=s-s]{setupDB}{AppHello}
+		\ganttlink[link type=s-s]{AppHello}{Mock}
+		\ganttlink[link type=s-s]{Mock}{WebSetup}
+		\ganttlink[link type=s-s]{WebSetup}{Clarify}
+	%
+	% Interconnectivity tasks 'n stuff
+	%
+	\ganttgroup{Interconnectivity}{9/23/16}{10/13/16} \\
+		\ganttbar[name=WebToDB]{Web speaks to Database}{9/23/16}{9/29/16}\\
+		\ganttbar[name=AppToDB]{Mobile speaks to Database}{9/30/16}{10/6/16}\\
+		\ganttbar[bar/.append style={fill=white, draw=black},name=Dem1]{Demonstrate to Sponsor}{10/7/16}{10/7/16}\\
+		\ganttbar[bar/.append style={fill=white, draw=black},name=Mock2]{Mock ups and wireframes}{10/7/16}{10/13/16}\\
+		\ganttlink[link mid=.3]{Clarify}{WebToDB}
+		\ganttlink{WebToDB}{AppToDB}
+		\ganttlink{AppToDB}{Dem1}
+		\ganttlink[link type=s-s]{Dem1}{Mock2}
+	%
+	% Preliminary Application Development tasks 'n stuff
+	%
+	\ganttgroup{Preliminary Application Development}{10/7/16}{10/31/16} \\
+		\ganttbar[bar/.append style={fill=white, draw=black},name=AppDev]{Mobile App Development}{10/7/16}{11/3/16}\\
+		\ganttbar[bar/.append style={fill=white, draw=black},name=WebDev]{Web App Development}{10/7/16}{11/3/16}\\
+		\ganttbar[name=DBwork]{Database Refinements}{10/7/16}{10/20/16}\\
+		\ganttbar[name=Feedback]{Feedback}{10/21/16}{10/24/16}\\
+		\ganttbar[name=Mock3]{New Mock ups}{10/25/16}{10/31/16}\\
+		\ganttlink[link type=s-s]{Mock2}{AppDev}
+		\ganttlink[link type=s-s]{Mock2}{WebDev}
+		\ganttlink[link type=s-s]{Mock2}{DBwork}
+		\ganttlink{DBwork}{Feedback}
+		\ganttlink{Feedback}{Mock3}
+	%
+	% Secondary Application Development tasks 'n stuff
+	%
+	\ganttgroup{Secondary Application Development}{11/1/16}{11/7/16} \\
+		\ganttbar[name=AppDev2]{Mobile App Development}{11/1/16}{11/7/16}\\
+		\ganttbar[name=WebDev2]{Web App Development}{11/1/16}{11/7/16}\\
+		\ganttbar[bar/.append style={fill=white, draw=black},name=DBwork2]{Database Refinements}{11/1/16}{11/2/16}\\
+		\ganttbar[bar/.append style={fill=white, draw=black},name=ship]{Make project shippable to sponsor}{11/3/16}{11/4/16}
+		\ganttlink[link mid=.3]{Mock3}{AppDev2}
+		\ganttlink[link type=s-s]{AppDev2}{WebDev2}
+		\ganttlink[link type=s-s]{WebDev2}{DBwork2}
+		\ganttlink{DBwork2}{ship}
+	
+\end{ganttchart}}
+\centering
+\begin{tikzpicture}[scale=0.6, every node/.style={scale=0.6}]
+\node [label=Critical Item,draw,fill=gray!50] (node1) {};
+\node [label={[name=l] Non Critical Item},draw,fill=white] (node2) at ([xshift=4cm]node1.east){};  
+\end{tikzpicture}

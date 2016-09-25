@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Databace Entity relations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[a4paper,12pt,landscape]{article}
+
+
+%\begin{document}
+	
+	%\thispagestyle{empty}
+	
+	\usetikzlibrary{positioning}
+	\usetikzlibrary{shadows}
+	
+	%\tikzstyle{every entity} = [fill=MSUgreen!30, draw=black!100]
+	\tikzstyle{every attribute} = [node distance=1cm]
+	%\tikzstyle{every attribute} = [fill=MSUorange!30, draw=black!100, node distance=1cm]
+	%\tikzstyle{every relationship} = [fill=MSUPurple!30, draw=black!100]
+	%\tikzstyle{every isa} = [fill=MSUgreenBlue!50, draw=black!100]
+	
+	\centering
+	\scalebox{.5}{
+		\begin{tikzpicture}[node distance=1.5cm, every edge/.style={link}]
+		
+	
+		\node[entity] (loc) {Location};%mec
+			\node[attribute] (cod) [above left=of loc] {\key{Bar Code}} edge (loc);
+			\node[attribute] (bld) [above=of loc] {Building} edge (loc);
+			\node[attribute] (cord) [above right=of loc] {Building Codinates} edge (loc);
+			
+		\node[relationship] (has) [below=of loc] {Has} edge (loc);
+		
+		\node[entity] (eqp) [below=of has] {Equipment Type} edge [<-] (has);%sal
+			\node[attribute] (type) [below=of eqp] {Type} edge (eqp);
+		
+		\node[relationship] (has1) [left=0.5cm of eqp] {Has} edge (eqp);
+			\node[attribute] (bar)  [below=of has1] {Range} edge (has1);
+		
+		\node[entity] (pcs) [left=0.5cm of has1] {Pece of Equipment};
+			\node[attribute] (bar)  [below=of pcs] {Bar Code} edge (pcs);
+		
+		\node[relationship] (ask) [left=2cm of has] {Asks} edge (loc);
+		
+		\draw[link] (ask) (ask) edge (eqp);
+		
+		\node[entity] (qus) [left=of ask] {Questions} edge [<-] (ask);
+			\node[attribute] (admin) [above left=of qus] {Administrator} edge (qus);
+			\node[attribute] (tex) [above right=of qus] {Question Text} edge (qus);
+
+		\node[relationship] (get) [left=2cm of qus] {Gets} edge (qus);
+		
+		\node[entity] (res) [below=of get] {Responce} edge [<-] (get);
+			\node[attribute] (val) [above left= of res] {Value} edge (res);
+			\node[attribute] (time) [left=of res] {\key{Time Stamp}} edge (res);
+			\node[attribute] (sub) [below left= of res] {Submiter} edge (res);
+		
+		\node[relationship] (has2) [right=0.5cm of res] {Has} edge (res);
+		\draw[link] (pcs) (pcs) edge [<-](has1);
+		\draw[link] (pcs) (pcs) edge [<-](has2);
+		
+		\node[relationship] (chk) [above=of qus] {Checks} edge [->] (qus);
+		
+		\node[entity] (rep) [left=of chk] {Report} edge (chk);
+			\node[attribute] (per) [above left= of rep] {Period} edge (rep);
+			\node[attribute] (resip) [left= of rep] {Resipiants} edge (rep);
+		\end{tikzpicture}
+	}
+	
+%\end{document}
