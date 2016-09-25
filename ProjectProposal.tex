@@ -6,7 +6,7 @@
 	\input{title.tex}
 	%make the abstract
 	\begin{abstract}
-		Design Team 3 as been asked to create a system to keep track of  and ensure complacence for the safety equipment on Arcelormittal's buildings. To do this the team needs to build three septate systems, a collection server scripts to manage a database, generate reports, and send reminder emails. A web based application to allow administrators to add items to a database and perspective tasks. Finlay A Android application to scan bar codes and recode response to assigned question.This project proposal is broken into two parts, first the project is defined in a way that hopefully will do the fowling:
+		Design Team 3 as been asked to create a system to keep track of  and ensure complacence for the safety equipment on Arcelormittal's buildings. To do this the team needs to build three septate systems, a collection server scripts to manage a database, generate reports, and send reminder emails. A web based application to allow administrators to add items to a database and perspective tasks.A Android application to scan bar codes and recode response to assigned question.This project proposal is broken into two parts, first the project is defined in a way that hopefully will do the fowling:\todo{This jusmps around I to much}
 		\begin{enumerate}
 			\item Demonstrate the teams current understanding of the project.
 			\item Define the project in such a way that it will be.
@@ -15,8 +15,9 @@
 	\end{abstract}
 
 \section{Project Definition}\label{def}
-	
+	This project team has been assigned an industry sponsored project from Arcelormittal USA, who need a way to track there industrial safety equipment in there buildings. in order to build this system the design team will need to build 3 primary system: an Android application for operators to scan bar codes on safety locations and equipment. A web application to alow administrators to build a database of safety equipment, asinine responsibility create and associate questions with locations or safety equipment. Final a server infrastructure to ensure data is held properly, host the web app, connect to the Andord app, generate reports, and reminders for inspections. 
 	\subsection{Scope}\label{scope}
+	In order to guide the teams design project and ensure the project has limits of what the team will build, a project scope has been defined:
 		\begin{itemize}
 			\item Mobile Application
 			\begin{itemize}
@@ -50,29 +51,48 @@
 				\item Generate and send out reports
 			\end{itemize}
 		\end{itemize}
-	\subsection{Function Definition}
+	\subsection{Function Definition} \todo{I just played word match with the lists he had in the slides, we may need more of these}
 		In order to justify the existence of items in Part~\ref{scope} the team created a number of function definitions. These definitions were then consolidated into the FAST diagram in Figure~\ref{fast1} along with a more detailed disciption.
 		\begin{figure}[h]
 			\centering
 			\input{FastDG.tex}
 			\caption{\label{fast1} FAST Digram}
 		\end{figure}
-		The Primary function for the project is \textbf{Ensure Compliance} This is the only goal of the project 
+		The Primary function for the project is \textbf{Ensure Compliance} This is the main goal of the system we have been commissioned to build. From our primary function are derived two secondary functions each having there own tertiary functions:\todo{I think the main probum with what i have here is that i dont talk abut how things are mesured}  
 		\begin{itemize}
-			\item
-			
-			\item Keep Recods
+			\item Verify Standers:\\
+			In order to Ensure Compliance with all pertinent safety regulations the system must be able to check the and verify that all the stranded are being upheld in the various locations and across the numerous safety devices.
+			\item Keep Records:\\
+			In order to ensure that all of the safety laws and regulations are fallowed we mus keep records of all the locations witch must have safety equipment present in a building, what safety equipment must be present, and how to verrify that it is in working condition.  
+
+			\item Other \todo{add more things}
+		\end{itemize}
+		From the secondary function Keep Records we have derived: 
+		\begin{itemize}
+			\item Generate Reports:\\
+			In order to keep records and ensure that every location and item is in compliance the system must be able to generate reports on any set of data on witch record are kept. 
+		\end{itemize}
+		From the secondary function Verify Standers we have derived:
+		\begin{itemize}
+			\item Set Requirements:\\
+			In order to Verify Standers the system must be able to set complacence requirements for each location and item witch is being tracked by the system.
+			\item Set Responsibility:\\
+			In order to Verify Standers the standers are being upheld a person must be assigned Responsibility for a number of locations and items within the system. Once this Responsibility is set the owner can be held accountably for there set of locations and items. 
+			\item Schedule Checklists:\\
+			so that Standers are verified  checklists should be generated to show those who are responsible for items witch items need to be checked to ensure compliance.
 		\end{itemize}
 		
+	\subsection{Work flow}
+		Here the team will use the data from the project description provided an example of how the team plans the how the system will be used.
+		  
+	
 	\subsection{Data Relations}
-		In order to see something good
+		In order to see how items in the system are related to each other the team has created a entity relation diagram. \todo{Dose this add anything? It was usful for me}
 		\begin{figure}[h]
 			\centering
 			\input{DB_ER.tex}
 			\caption{\label{ERdiogram} Database entity relations Diagram}
 		\end{figure}
-		
-	\subsection{Work flow}
 		
 	
 \section{Scheduling}
@@ -80,27 +100,32 @@
 		
 		
 	\subsection{Preliminary Set up}\label{cyc1}
-		In the first cycle the team peruses actions witch move to the understanding of the finer details of the system it has been tasked to build.
+		In the first cycle the team peruses actions witch move to the understanding of the finer details of the system it has been tasked to build. This cycle includes several instances of contact with the sponsor in order to both better understand the costumers needs and build a relationship for ongoing communication. At the end of this cycle the team will deliver a project proposal to the faculty advisor and the project sponsor along with having verified that the most basic functionality of the Database, Web application, Android application and design mock-ups for the later two. 
 		
 		\begin{itemize}
-			\item\textbf{Meet with Sponsor:}\\
-			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
+			\item\textbf{Meet with Sponsor:}(The Team)\\
+			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal. In order to better understand the needs layed out in the project description. In this meeting the project sponsor was promoted to priorities key features and  describe what a successfully project would entail.
 			
-			\item \textbf{Solidify Understanding of Project:}\\
-			In this task the Team meats and decuses the what was learned in the 
+			\item \textbf{Solidify Understanding of Project:}(The Team)\\
+			In this task the Team meats to discus the what was learned in the meeting with the project sponsor. In order to layout the framework in witch the team can build the requested system.
 			
-			\item\textbf{Additional Questions for Sponsor:}\\
+			\item\textbf{Additional Questions for Sponsor:}(The Team)\\
+			After exhaustive discussion on the both the high level work flows and technical feasibility of the project the team will compose a set of questions to be electronically mailed to the project sponsor in order to clear up lingering discontinuity in the teams understanding of the system.
 			
-			\item\textbf{Set up Database:}\\
+			\item\textbf{Set up Database:}(Alexandria \& Ian)\\
+			In this task two team members will decide on a framework for building the server side infrastructure for the system. This will include choosing and setting up the server operating system, cusing the main programing language to be used for building the sever infrastructure.
 			
-			\item\textbf{Hello World on Tablet:}\\
+			\item\textbf{Hello World on Tablet:}(Kyle)\\
+			In this task a team member will build a simple hello world program for style of android tablet indicated by the project sponsor. In building a hello world program for the tablet the team member will also choose a library for decoding bar codes using the tablet camera. 
 			
-			\item\textbf{Draw Mock ups:}\\
+			\item\textbf{Draw Mock ups:}(Trevor)\\
+			In this task a team member will draw the initial designs for the user experiences that will be had in the various user portals of the system so that the project sponsor can have an idea of what the user interface will be like and can give us insights that will help all aspects of the teams design. 
 			
-			\item\textbf{Set up Web Page:}\\
+			\item\textbf{Set up Web Page:}(Seth)\\
+			In this task a team member will setup an initial front end for the administrator websight. The team member will decide on a set of predefined web objects that can be used to build web applications witch will best allows the team to build an effective web application front end. 
 			
-			\item\textbf{Ask Clarifying questions for sponsor:}\\
-			
+			\item\textbf{Ask Clarifying questions for sponsor:}(The Team)\\
+			After facing the initial feasibility challenges involved in the building the main subsystem of the project the team will compile the design report and a number of clarifying questions for the sponsor in order to further refine the teams initial design decisions. 
 		\end{itemize}
 		
 		
@@ -109,10 +134,8 @@
 		
 		\begin{itemize}
 			\item\textbf{Web speaks to Database:}\\
-			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
 			
 			\item \textbf{Mobile speaks to Database:}\\
-			In this task the Team meats and decuses the what was learned in the 
 			
 			\item\textbf{Demonstrate to Sponsor:}\\
 			
@@ -124,10 +147,8 @@
 		
 		\begin{itemize}
 			\item\textbf{Mobile App Development:}\\
-			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
 			
 			\item \textbf{Web App Development:}\\
-			In this task the Team meats and decuses the what was learned in the 
 			
 			\item\textbf{Database Refinements:}\\
 			
@@ -141,10 +162,9 @@
 		
 		\begin{itemize}
 			\item\textbf{Mobile App Development:}\\
-			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal.
 			
 			\item \textbf{Web App Development:}\\
-			In this task the Team meats and decuses the what was learned in the 
+			
 			
 			\item\textbf{Database Refinements:}\\
 			
