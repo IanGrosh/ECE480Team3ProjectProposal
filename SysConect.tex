@@ -5,23 +5,31 @@
 \begin{tikzpicture}[node distance=2cm]
 	
 	\tikzstyle{every node} = [ellipse, minimum width=3cm, minimum height=2cm,text centered, draw=black]
-	%\tikzstyle{arrow} = [thick,->]
+	\tikzstyle{arrow} = [thick,->]
 	%\tikzstyle{arrow} = [->, >=latex', shorten >=1pt, thick]
 	
 	\node (fram) {Web Framework};
-	\node (app) [above left=of fram] {Mobble Aplication};
+	\node (app) [above left=1cm and 3cm of fram] {Mobble Aplication};
 	\node (web) [above=of fram] {Web Aplication};
-	\node (email) [above right=of fram] {Emails \& Reports};
+	\node (email) [above right=1cm and 3cm of fram] {Emails \& Reports};
 	\node (db) [below=of fram] {Databace};
 	
-	\path%[line width=1.4pt, line cap=rect]
-		 (fram) edge -- (app)
-		 (app) edge -- (fram);
+	%\path[every node/.style={font=\sffamily}]
+	%  (fram) edge[bend right=10] node  {Get}  (app)
+	%  (app) edge[bend right=10] node  {Save}  (fram)
+	%  (web) edge[bend right=10] node {Get}  (fram)
+	%  (fram) edge[bend right=10] node {}  (web)
+	%  (email) edge[bend right=10] node {}  (fram)
+	%  (fram) edge[bend right=10] node {}  (email)
+	%  (fram) edge node {} (db);
+	\draw [bend left] (app) -- (fram)
+    %\draw (fram) arc -- (app);
+	%\draw (app) arc -- (fram);
 	%\draw [arrow] (fram) -- (app);
 	%\draw [arrow,bend left=45] (app) -- (fram);
 	%\draw [arrow] (fram) -- (web);
 	%\draw [arrow] (fram) -- (email);
-	%\draw [arrow] (fram) -- (db);
+	%\draw [arrow,bend right] (fram) -- (db);
 	
 	
 	
