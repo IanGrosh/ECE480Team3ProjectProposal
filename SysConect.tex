@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% System level conection diagram
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\scalebox{.5}{
+\begin{tikzpicture}[node distance=2cm]
+	
+	\tikzstyle{every node} = [ellipse, minimum width=3cm, minimum height=2cm,text centered, draw=black]
+	%\tikzstyle{arrow} = [thick,->]
+	%\tikzstyle{arrow} = [->, >=latex', shorten >=1pt, thick]
+	
+	\node (fram) {Web Framework};
+	\node (app) [above left=of fram] {Mobble Aplication};
+	\node (web) [above=of fram] {Web Aplication};
+	\node (email) [above right=of fram] {Emails \& Reports};
+	\node (db) [below=of fram] {Databace};
+	
+	\path%[line width=1.4pt, line cap=rect]
+		 (fram) edge -- (app)
+		 (app) edge -- (fram);
+	%\draw [arrow] (fram) -- (app);
+	%\draw [arrow,bend left=45] (app) -- (fram);
+	%\draw [arrow] (fram) -- (web);
+	%\draw [arrow] (fram) -- (email);
+	%\draw [arrow] (fram) -- (db);
+	
+	
+	
+\end{tikzpicture}
+}
+
+%\draw [arrow] (start) -- (in1);
+%\draw [arrow] (dec1) -- node {yes} (pro2a);
+%\draw [arrow] (dec1) -- node[anchor=south] {no} (pro2b);
