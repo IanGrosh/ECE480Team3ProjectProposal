@@ -11,15 +11,21 @@
 \usepackage{tikz-er2}
 \usepackage{fast-diagram}
 \usepackage{tikz}
-
+\usepackage{multirow}
+\usepackage{xcolor,colortbl}
+\usepackage{array}
+\usepackage{hhline}
 
 \usetikzlibrary{shapes.geometric,arrows,automata,calc,shapes, positioning}
+
 
 \newcommand{\labs}{\renewcommand{\chaptername}{Lab}}
 \newcommand{\Appendix}{	\makeatletter 
 					\appendix
 					\renewcommand\chaptername{Appendix}}
 
+\NewDocumentCommand{\rot}{O{45} O{1em} m}{\makebox[#2][l]{\rotatebox{#1}{#3}}}%
+\newcolumntype{M}{>{\centering\arraybackslash}m}
 
 \lstset{language=C,
 	numbers=left,
