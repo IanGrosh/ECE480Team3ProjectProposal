@@ -4,6 +4,13 @@
 \begin{document}
 	%make the tile
 	\input{title.tex}
+			\tableofcontents
+			\listoffigures
+			\begingroup
+			\let\clearpage\relax
+			\listoftables
+			\endgroup
+			\newpage
 	%make the abstract
 	\begin{abstract}
 		Design Team 3 has been asked to create a system to keep track of safety equipment on ArcelorMittal's buildings. To do this the team needs to build some systems. These systems will enable administrators to both monitor compliance standards on areas they are in charge of, and make sure that safety equipment is being properly checked and documented. Reports will be sent out periodically on the above to said administrators.  On the user end, an Android application  that uses a scanner will be created that will enable users to quickly answer questions on safety equipment standards.  This project proposal is broken into the following parts:
@@ -17,41 +24,64 @@
 \part{Technical}
 \section{Project Definition}\label{def}
 	This team has been assigned an industry sponsored project from ArcelorMittal USA, who need a way to track their industrial safety equipment within their buildings In order to build the specified system Team 6 will need to build three primary systems. The first being an Android application for operators to scan bar codes on safety locations and equipment. A web application to allow administrators to specify questions for specific pieces of safety equipment, and furthermore assign responsibility to workers. Finally a server infrastructure will be created to ensure data is held properly and securely, host the web application, connect to the Android app, and generate reports. 
+			
+	\begin{figure}[h]
+		\centering
+		\input{SysConect.tex}
+		\caption{\label{sysConn} System Components}
+	\end{figure}
+	
 	\subsection{Scope}\label{scope}
 	In order to guide the teams design project and ensure the project has limits of what the team will build, a project scope has been defined:
+	\\
+	\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
-			\item Mobile Application
+			\item \textbf{Mobile Application}
 			\begin{itemize}
 				\item Off-line Mode
 				\item Bar code Scanning
 				\item Bar code based questions
 			\end{itemize}
-			\item Web Application
-			\begin{itemize}
-				\item Add locations to the database
-				\item Add safety equipment types to the database
-				\item Create questions
-				\item Associate Bar codes with:
-				\subitem Locations
-				\subitem Safety equipment
-				\item Associate Locations with:
-				\subitem Safety Equipment
-				\subitem Questions
-				\item Associate safety equipment with
-				\subitem Locations
-				\subitem Questions
-				\item Add Questions to reports
-				\item Create timetable for reports
-				\item Add recipient to reports
-			\end{itemize}
-			\item Sever side Database and middle-ware
+			\item \textbf{Sever side Database and middle-ware}
 			\begin{itemize}
 				\item Host:
-				\subitem Web application
-				\subitem Database API for mobile app
-				\item Generate and send out reports
+					\subitem Web application
+					\subitem Database API for mobile app
+			\end{itemize}
+			\item\textbf{ Emails \& Reports}
+			\begin{itemize}
+				\item Inform Administrators of:
+					\subitem Failing devices
+					\subitem Delinquent Inspectors
+				\item Inform Inspectors of:
+					\subitem Upcoming Inspections
+					\subitem Missed Inspections
 			\end{itemize}
 		\end{itemize}
+	\end{minipage}
+	\begin{minipage}[t]{0.5\textwidth}
+		\begin{itemize}
+			\item \textbf{Web Application}
+				\begin{itemize}
+					\item Add locations to the database
+					\item Add safety equipment types to the database
+					\item Create questions
+					\item Associate Bar codes with:
+						\subitem Locations
+						\subitem Safety equipment
+					\item Associate Locations with:
+						\subitem Safety Equipment
+						\subitem Questions
+					\item Associate safety equipment with
+						\subitem Locations
+						\subitem Questions
+					\item Add Questions to reports
+					\item Create timetable for reports
+					\item Add recipient to reports
+				\end{itemize}
+		\end{itemize}
+	\end{minipage}
+		
 	\subsection{Function Definition} 
 		In order to justify the existence of items in Part~\ref{scope} the team created a number of function definitions. These definitions were then consolidated into the FAST diagram in Figure~\ref{fast1} along with a more detailed description.
 		\begin{figure}[h]
@@ -95,21 +125,28 @@
 \section{Technical Design}
 	
 	\subsection{Mobil Application}
+	Design team 3 will build a Mobile application for a tablet device witch will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the intranet, scan bar codes of locations and safety devices to allow the user to answer a seres of pass fail inspection questions, push question responses back to the database over the sponcers intranet.
 	\subsubsection{Mobil User Interface \& Experience}
-	
+	Desing Team three has comitiond the world renowned user interface and user expereance designer, Trevor Sabo to design a front end for both our moble and web applications.\\
+	\\
+	Design Team three will create a user interface and expereance(UI/UX) to guide the safety inspector through the proses of an inspection Figure~\ref{fig:login} the user is prompted to enter three payroll number so that the data reverent to that user can be sync to the noble device and so that the inspection results can be logged under the correct employees name.
+	If the users device is connected to the intranet will depress the button labeled sync in Figure~\ref{fig:splash} witch will retreve the inspection locations and safety device information pertinent to the user.
+	Once the inspector reaches a location they will depress the Scan Barcode Location button shown in Figure~\ref{fig:splash}
 	\begin{figure}[h]
 		
 		\begin{minipage}{0.5\textwidth}
 			\centering
 			\includegraphics{StartPage.png}
-			\caption{Mocup of Start Screen}
+			\caption{\label{fig:login}Mocup of Start Screen}
 		\end{minipage}%real title space need to be here?
 		\begin{minipage}{0.5\textwidth}
 			\centering
 			\includegraphics{SplashPage.png}
-			\caption{Mocup of splash screen}
+			\caption{\label{fig:splash}Mocup of splash screen}
 		\end{minipage}
 	\end{figure}
+	
+	\subsubsection{Bar code Scanning}
 	
 	\subsubsection{Off-line Mode}
 	
@@ -117,6 +154,8 @@
 		In order to allow the Administrators to add safety equipment and inspection questions to the database, assassin ownership, set email reminder schedules, and generate reports, Design Team 3 must build a simple web application. In order to do so the design team will use a web app framework to build the fetchers required quickly and robustly.
 		\\
 		Based on the technical requirements and anticipated need Design Team 3 has devised the foling criteria to judge possible choses of web frameworks: 
+		\\
+		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Integrates With Sponsor IT}\\
 			Design Team 3s sponsor Arcelormittal USA uses a Microsoft windows baced infistrutur for its internal IT. This is significant because  most of the Internet and so most of the web frameworks are built around UNIX like operationg systems such as Linux or free BSD, While manny have been built to work in a windows environment we must deterin if that exists and if so how well.
@@ -126,7 +165,10 @@
 				
 			\item \textbf{Ease Of use} \\
 			The complexity of a framework can be quite large and part of that can be in the langige the framework is writing in. this requires Design Team 3 to determine how difficult stranded tasks such as serving a web parge, and dynamically creating content. By looking at slandered task the overall difficulty of building the full web application will be.	
-					
+		\end{itemize}
+		\end{minipage}
+		\begin{minipage}[t]{0.5\textwidth}
+		\begin{itemize}
 			\item \textbf{Learning curve} \\
 			
 			
@@ -136,8 +178,9 @@
 			
 			
 		\end{itemize}
-		
-		Then we chose from the plethera of existing frameworks six witch would  
+		\end{minipage}\\
+		\\
+		Then we chose from the plethora of existing frameworks seven witch are cominly used in web app development to compare agents these requirements. The each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
 		
 		\begin{itemize}
 			\item \textbf{Ruby on Rails} \\
@@ -145,31 +188,33 @@
 			\item \textbf{Django} \\
 			Django is a python one the most popular web frameworks and is built in python. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add interesting fetchers.
 			\item \textbf{Play} \\
-			Play is a Java Web framework
+			Play is a Java Web framework. This framework as a large apeal for us as we will be writeing our androide aplication in java, and there is a huge amount of support for the leanguige witch would be helpful
 			\item  \textbf{Express}\\
 			Express is a Node.js Web application framework.
 			\item \textbf{Laravel} \\
 			Laravel Is a popular PHP baced web framework
 			\item \textbf{Revel} \\
 			Revel is the go languige web framework. As with menny things in go there is one right way to do something and this is it.
+			\item \textbf{TurboGears}
+			Next generation python web framework. Taking ques from frameworks like Dajango and Rails this framework uses advanced python and other langiges to build a web app.
 		\end{itemize}
 		
 		
 	
-		\begin{figure}[h]
+		\begin{table}[h]
 			\centering
 			\input{WebFramworkChart.tex}
 			\caption{\label{WebMatrix} Web Framework Solution Selection Matrix}
-		\end{figure}
+		\end{table}
 	
 	
-	\subsection{Data}
+	\subsection{Database}
 		In order to see how items in the system are related to each other the team has created a entity relation diagram.
-		\begin{figure}[h]
+		\begin{table}[h]
 			\centering
 			\input{DatabaceChart.tex}
 			\caption{\label{DBMatrix} Database Solution Selection Matrix}
-		\end{figure}
+		\end{table}
 		
 		\begin{figure}[h]
 			\centering
@@ -177,12 +222,7 @@
 			\caption{\label{ERdiogram} Database entity relations Diagram}
 		\end{figure}
 	
-		
-		\begin{figure}[h]
-			\centering
-			\input{SysConect.tex}
-			\caption{\label{sysConn} System Components}
-		\end{figure}
+
 		
 	
 \part{Cost}
