@@ -14,15 +14,14 @@
 	\node (email) [above right=1cm and 3cm of fram] {Emails \& Reports};
 	\node (db) [below=of fram] {Databace};
 	
-	%\path[every node/.style={font=\sffamily}]
-	%  (fram) edge[bend right=10] node  {Get}  (app)
-	%  (app) edge[bend right=10] node  {Save}  (fram)
-	%  (web) edge[bend right=10] node {Get}  (fram)
-	%  (fram) edge[bend right=10] node {}  (web)
-	%  (email) edge[bend right=10] node {}  (fram)
-	%  (fram) edge[bend right=10] node {}  (email)
-	%  (fram) edge node {} (db);
-	\draw [bend left] (app) -- (fram)
+	\path[every node/.style={font=\sffamily}]
+	  (fram) edge[thick,->,bend right=10,->] node[midway,above]  {Get}  (app)
+	  (app)  edge[thick,->,bend right=10] node[midway,below]  {Post}  (fram)
+	  (web)  edge[thick,->,bend right=10] node[midway,left] {Get} (fram)
+	  (fram) edge[thick,->,bend right=10] node[midway,right] {Post}  (web)
+	  (fram) edge[thick,->] node[midway,above] {Send}  (email)
+	  (fram) edge[thick,->] node[midway,left] {Save} (db);
+	%\draw [bend left] (app) -- (fram);
     %\draw (fram) arc -- (app);
 	%\draw (app) arc -- (fram);
 	%\draw [arrow] (fram) -- (app);
