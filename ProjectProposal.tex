@@ -14,6 +14,10 @@
 			\newpage	
 
 
+	\begin{abstract}
+		Design team three has been asked to create a system to keep track of safety equipment on ArcelorMittal's buildings. To do this the team needs to build some systems. These systems will enable administrators to both monitor compliance standards on areas they are in charge of, and make sure that safety equipment is being properly checked and documented. Reports will be sent out periodically on the above to said administrators.  On the user end, an Android application  that uses a scanner will be created that will enable users to quickly answer questions on safety equipment standards.
+
+	\end{abstract}
 \part{Overview of Customer's Requirements}
 \section{Background Research}\label{research}
 	There is background research that needs to be implemented to characterize primary hardware and software components that are needed for a successful project. \\
@@ -30,17 +34,12 @@
 	Criteria to judge the feasibility of the design has been outlined by team three's sponsor ArcelorMittal. Team three was given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMittal's current implementation of problem, Field ID. To satisfy necessary criteria, team three's goal is to implement a software-based solution, hence; automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
 	Each set of conceptual designs/variations meets the feasibility criteria. Team three's solution meets the goals of the customer's needs; the proposed solution has been approved by both team sponsor and facilitator. Trade off studies that need be conducted to assess the above concerns are speed of response time, and difficulty to move team three's software development environment to production. In a software environment, feasible conceptual designs are always subjected to change. \\
 	\subsection{Risks}
-	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
+	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. ArcelorMittal has their own security team to ensure that the proposed system once moved to a production developement will be secure. In addition the data team three is dealing with is not confidential. That being said, all code will be written in a secure manner. Special attention will be will be paid to SQL  queries, and injections.  Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal's systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
+	
 	\subsection{Overview of System Models}
 	As the nature of this project is more software oriented then hardware, developing models for system senors, actuators, interfaces or other principle level system components are not a concern. As a result, no validation is needed. Similarly, issues involving control processes are not a concern. \\
-
-	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM. \\
 	
-	\cite{nexus7}
-	SOMEONE CITE THIS PLEASE http://www.gsmarena.com/asus\_google\_nexus\_7-4850.php \\
-
 	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM \cite{nexus7}. \\
->>>>>>> origin/master
 	
 	\subsection{Developmental Strategy}
 	Team three has picked a bottom-up approach. Team three will implement lower levels specifics at highest level of importance. This gives the team the ability to test database communication first. Further, when fusing data into the user interface, the API's implemented create connections for testing. This allows the team to efficiently design an experience while minimizing on constraints. Developmental tools for the environments will also be utilized for testing. \\ 
