@@ -1,5 +1,3 @@
 *
-!*.tex
 !*.sty
-!Pictures/*.png
 !.gitignore
