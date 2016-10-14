@@ -14,16 +14,15 @@
 			\newpage	
 
 
-	\begin{abstract}
+\part{Introduction}
 		Design team three has been asked to create a system to keep track of safety equipment on ArcelorMittal's buildings. To do this the team needs to build some systems. These systems will enable administrators to both monitor compliance standards on areas they are in charge of, and make sure that safety equipment is being properly checked and documented. Reports will be sent out periodically on the above to said administrators.  On the user end, an Android application  that uses a scanner will be created that will enable users to quickly answer questions on safety equipment standards.
 
-	\end{abstract}
 \part{Overview of Customer's Requirements}
 \section{Background Research}\label{research}
 	There is background research that needs to be implemented to characterize primary hardware and software components that are needed for a successful project. \\
 	\subsection{Assessing Customer Needs}\label{custneeds}
 
-	The customer's needs, as well as the needs of their users, are team three's highest priority. Team three's sponsor, our primary point of contact, is Jim Lang with ArcelorMittal. Our sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with the system. Team three's customer's needs are clearly documented by ArcelorMittal. This documentation assess the needs and interests of the ultimate user. \\ 
+	The customer's needs, as well as the needs of their users, are team three's highest priority. Team three's sponsor, primary point of contact, is Jim Lang with ArcelorMittal. Team three's sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with the system. Team three's customer's needs are clearly documented by ArcelorMittal. This documentation assess the needs and interests of the ultimate user. \\ 
 
 
 	\subsection{Design Constraints}
@@ -31,7 +30,7 @@
 
 
 	\subsection{Feasibility of Designs}
-	Criteria to judge the feasibility of the design has been outlined by team three's sponsor ArcelorMittal. Team three was given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMittal's current implementation of problem, Field ID. To satisfy necessary criteria, team three's goal is to implement a software-based solution, hence; automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
+	Criteria to judge the feasibility of the design has been outlined by team three's sponsor ArcelorMittal. Team three was given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMittal's current implementation of problem, Field ID. To satisfy necessary criteria, team three's goal is to implement a software-based solution; hence, automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
 	Each set of conceptual designs/variations meets the feasibility criteria. Team three's solution meets the goals of the customer's needs; the proposed solution has been approved by both team sponsor and facilitator. Trade off studies that need be conducted to assess the above concerns are speed of response time, and difficulty to move team three's software development environment to production. In a software environment, feasible conceptual designs are always subjected to change. \\
 	\subsection{Risks}
 	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. ArcelorMittal has their own security team to ensure that the proposed system once moved to a production developement will be secure. In addition the data team three is dealing with is not confidential. That being said, all code will be written in a secure manner. Special attention will be will be paid to SQL  queries, and injections.  Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal's systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
@@ -46,7 +45,7 @@
 
 \section{High Level Languages}\label{highlevel}
 	\subsection{Languages}
-	As for compilers on the Back End most things will be written in the programming language Python, which does not have a compiler. For the email service, SMTP python libraries will be used, as well as various web framework libraries. The web framework libraries are provided by Django, a high-level Python Web framework. \\
+	As for compilers on the back-end most things will be written in the programming language Python, which does not have a compiler. For the email service, SMTP python libraries will be used, as well as various web framework libraries. The web framework libraries are provided by Django, a high-level Python Web framework. \\
 	Android Application Development is written in Java which does have a compiler. On the administrator side, jQuery, Twitter's Bootstrap, will be used for web development.  A detailed implementation can be found in section \ref{WEBAPP}.  \\ 
 
 
@@ -118,7 +117,7 @@
 			\input{FastDG.tex}
 			\caption{\label{fast1} FAST Digram}
 		\end{figure}
-		The Primary function for the project is \textbf{Ensure Compliance} This is the main goal of the system we have been commissioned to build. From our primary function are derived two secondary functions each having there own tertiary functions:
+		The Primary function for the project is \textbf{Ensure Compliance} This is the main goal of the system the team has been commissioned to build. From the team's primary function are derived two secondary functions each having there own tertiary functions:
 		\begin{itemize}
 			\item Verify Standards:\\
 			In order to ensure compliance with all pertinent safety regulations the system must be able to check the and verify that all the stranded are being upheld in the various locations and across the numerous safety devices.
@@ -179,20 +178,20 @@
 	\end{figure}
 
 	\subsubsection{Barcode Scanning}
-	The user will scan the barcode with the Android Application created. After successful scan, questions will pop up that need to be answered. On the event of a non-successful scan, a manual barcode insertion will be needed. The barcode scanning is done with a ZXing library (Zebra Crossing), and is open source and very well documented. Through testing we have found that this library produces a very reliable, accurate scanner and is perfect for the design specifications.\\
+	The user will scan the barcode with the Android Application created. After successful scan, questions will pop up that need to be answered. On the event of a non-successful scan, a manual barcode insertion will be needed. The barcode scanning is done with a ZXing library (Zebra Crossing), and is open source and very well documented. Through testing team three has found that this library produces a very reliable, accurate scanner and is perfect for the design specifications.\\
 	In comparison, the Google Barcode  image recognition software was not quite what the team wanted. It is not open source, but it was free. Team three choose the ZXing library because it was easier to use.
 	\subsubsection{Off-line Mode}
-	The Android Application will be able to run without WIFI. This is very important because at the time of the scan, there will be no WIFI. Data collected from inspections will be stored locally on the tablet until wifi is available for sync. 
+	The Android Application will be able to run without WIFI. This is very important because at the time of the scan, there will be no WIFI. Data collected from inspections will be stored locally on the tablet until WIFI is available for sync. 
 
 	\subsection{Web Application}\label{WEBAPP}
 		Administrators need to be able to add safety equipment and inspection questions to the database, assign ownership, and generate reports. Design team three must build a web application to satisfy that requirement. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
 		\\
-		Based on the technical requirements and anticipated need Design Team 3 has devised the following criteria to judge possible choices of web frameworks:
+		Based on the technical requirements and anticipated need team three has devised the following criteria to judge possible choices of web frameworks:
 		\\
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Integrates With Sponsor IT}\\
-			Design team three's sponsor ArcelorMittal, uses a Microsoft Windows based software for their internal IT. The team must ensure our choice of framework is compatible in a Microsoft server environment.
+			Design team three's sponsor ArcelorMittal, uses a Microsoft Windows based software for their internal IT. The team must ensure their choice of framework is compatible in a Microsoft server environment.
 
 			\item \textbf{Documentation}\\
 			One of the most important parts of any software library is the documentation. If a developer is required to dig through source code to determine how a library works because there are no instructions explaining it's implementation, the amount of time which will be required will increase exponentially and will result in code that is more prone to defects.
@@ -208,10 +207,10 @@
 
 
 			\item \textbf{Stack Fullness} \\
-			Stack fullness refers to how well each part of the stack is covered in the proposed framework. Since the team is creating a Full Stack application (an application that has a Front End and a Back End), this is going to be very important to consider.
+			Stack fullness refers to how well each part of the stack is covered in the proposed framework. Since the team is creating a Full Stack application (an application that has a front-end and a back-end), this is going to be very important to consider.
 
 			\item \textbf{Third Party Ecosystem}\\
-			The third party ecosystem deals with the integration from our sponsor, AreclorMittal. Team 3 needs to make sure that the product that is made has an easy integration with ArcelorMittal's systems. 
+			The third party ecosystem deals with the integration from the team's sponsor, AreclorMittal. Team three needs to make sure that the product that is made has an easy integration with ArcelorMittal's systems. 
 			
 		\end{itemize}
 		\end{minipage}\\
@@ -226,9 +225,9 @@
 			Django is a Python built framework and is one the most popular web frameworks. Django has numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features. Django has a very easy learning curve, becuase it is built in Python. The framework is fast, scalable and secure \cite{django}.
 			\item \textbf{Play} \\
 
-			Play is a Java Web framework. This framework as a large appeal for us as we will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful \cite{play}.
-			\item  \textbf{Express}\\
-			Express is a Node.js Web application framework \cite{express}.
+			Play is a Java Web framework. Play is based on a lightweight, stateless, web-friendly architecture. It provides predictable and minimal resource consumption (CPU, memory, threads) for highly-scalable applications. This framework is beneficial to team three's solution as their mobile application is also written in Java\cite{play}.
+			\item  \textbf{Express.js}\\
+			Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications, as well as API's. It is relatively minimal with many features available as plugins. Express is the back-end part of the MEAN stack, together with MongoDB database and AngularJS front-end framework. \cite{express}.
 			\item \textbf{Laravel} \\
 			Laravel is a popular PHP based web framework \cite{laravel}. 
 			\item \textbf{Revel} \\
@@ -264,6 +263,7 @@
 		
 	
 \part{Cost}
+
 The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices. The Nexus 7 tablet's cost averages to be about \$120. The Nexus 7 tablet is a crucial part to this design because we need a device to test our software on. There are Android development studios for developing, but the team needs to make sure that the software will work for production.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used. \\
 	    \begin{itemize}
 	    \item \textbf{Tablet}\\
@@ -271,11 +271,11 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 		    \end{itemize}
 \part{Project Management}
 \section{Scheduling}
-		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planned to address a number of the design requirements, which must be developed at the same time, due to the highly interconnected nature of the individual subsystems. 
+		In order to better adapt to the complex requirements defined in Section~\ref{def}, the team has broken the tasks into four iterative cycles. Each cycle is planned to address a number of the design requirements, which must be developed at the same time, due to the highly interconnected nature of the individual subsystems. 
 		
 		
 	\subsection{Preliminary Set Up}\label{cyc1}
-		In the first cycle the team pursues actions which move to the understanding of the finer details of the system it has been tasked to build. This cycle includes several instances of contact with the sponsor in order to both better understand the customer's needs and build a relationship for ongoing communication. At the end of this cycle the team will deliver a project proposal to the faculty advisor and the project sponsor along with verifying the basic functionality of the database, web application, Android application and design mock-ups. 
+		In the first cycle the team pursues actions which move to the understanding of the finer details of the system which has been tasked to build. This cycle includes several instances of contact with the sponsor in order to both better understand the customer's needs and build a relationship for ongoing communication. At the end of this cycle the team will deliver a project proposal to the faculty advisor and the project sponsor along with verifying the basic functionality of the database, web application, Android application and design mock-ups. 
 		
 		\begin{itemize}
 			\item\textbf{Meet with Sponsor:} (The Team)\\
@@ -297,7 +297,7 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 			In this task a team member will draw the initial designs for the user experiences that will be had in the various user portals of the system so that the project sponsor can have an idea of what the user interface will be like and can give us insights that will help all aspects of the team's design. 
 			
 			\item\textbf{Set up Web Page:} (Seth)\\
-			In this task a team member will setup an initial front end for the administrator web sight. The team member will decide on a set of predefined web objects that can be used to build web applications which will best allows the team to build an effective web application front end. 
+			In this task a team member will setup an initial front-end for the administrator web sight. The team member will decide on a set of predefined web objects that can be used to build web applications which will best allows the team to build an effective web application front-end. 
 			
 			\item\textbf{Ask Clarifying questions for sponsor:} (The Team)\\
 			After facing the initial feasibility challenges involved in the building the main subsystem of the project the team will compile the design report and a number of clarifying questions for the sponsor in order to further refine the teams initial design decisions. 
@@ -306,7 +306,7 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 		
 		
 	\subsection{Interconnectivity}\label{connect}
-		In the interconnectivity step, design team three will focus on building and testing connections between the baseline system, setup in section \ref{cyc1}.
+		In the interconnectivity step, design team three will focus on building and testing connections between the baseline system, setup in this section \ref{cyc1}.
 		\begin{itemize}
 			\item\textbf{Web speaks to Database:} (Seth)\\
 			This step will consist of establishing a connection between the existing front-end of the administrator website developed in section \ref{scope} and the database that will allow the administrator site to read from and write to the database.  This functionality will be used for retrieving and modifying information regarding the whereabouts and inspection status of safety equipment. 
@@ -316,7 +316,7 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 			This development task will require establishing a connection between the Android mobile application and the database.  This will allow the mobile application to read information from the database to be displayed in the mobile application and to upload new inspection results from a local instance of the mobile application to the central database.
 
 			\item\textbf{Demonstrate to Sponsor:} (The Team)\\
-			 In this phase, we will demonstrate to the sponsor, either in person or via video, the ability of the website and mobile application to both read and post information to one common, central database to be used for storing inspection results and safety equipment details.
+			 In this phase, team three will demonstrate to the sponsor, either in person or via video, the ability of the website and mobile application to both read and post information to one common, central database to be used for storing inspection results and safety equipment details.
 
 			
 			\item\textbf{Mock ups and Wire Frames:} (Trevor)\\
