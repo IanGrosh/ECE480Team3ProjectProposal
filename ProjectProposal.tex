@@ -11,13 +11,16 @@
 			\let\clearpage\relax
 			\listoftables
 			\endgroup
-			\newpage
+			\newpage	
 
+
+\part{Introduction}
+		Design team three has been asked to create a system to keep track of safety equipment on ArcelorMittal's buildings. To do this the team needs to build some systems. These systems will enable administrators to both monitor compliance standards on areas they are in charge of, and make sure that safety equipment is being properly checked and documented. Reports will be sent out periodically on the above to said administrators.  On the user end, an Android application  that uses a scanner will be created that will enable users to quickly answer questions on safety equipment standards.
 
 \part{Overview of Customer's Requirements}
 \section{Background Research}\label{research}
 	There is background research that needs to be implemented to characterize primary hardware and software components that are needed for a successful project. \\
-	\subsection{Assessing Customer Needs}
+	\subsection{Assessing Customer Needs}\label{custneeds}
 
 	The customer's needs, as well as the needs of their users, are team three's highest priority. Team three's sponsor, primary point of contact, is Jim Lang with ArcelorMittal. Team three's sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with the system. Team three's customer's needs are clearly documented by ArcelorMittal. This documentation assess the needs and interests of the ultimate user. \\ 
 
@@ -30,9 +33,11 @@
 	Criteria to judge the feasibility of the design has been outlined by team three's sponsor ArcelorMittal. Team three was given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMittal's current implementation of problem, Field ID. To satisfy necessary criteria, team three's goal is to implement a software-based solution; hence, automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
 	Each set of conceptual designs/variations meets the feasibility criteria. Team three's solution meets the goals of the customer's needs; the proposed solution has been approved by both team sponsor and facilitator. Trade off studies that need be conducted to assess the above concerns are speed of response time, and difficulty to move team three's software development environment to production. In a software environment, feasible conceptual designs are always subjected to change. \\
 	\subsection{Risks}
-	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
+	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. ArcelorMittal has their own security team to ensure that the proposed system once moved to a production developement will be secure. In addition the data team three is dealing with is not confidential. That being said, all code will be written in a secure manner. Special attention will be will be paid to SQL  queries, and injections.  Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal's systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
+	
 	\subsection{Overview of System Models}
 	As the nature of this project is more software oriented then hardware, developing models for system senors, actuators, interfaces or other principle level system components are not a concern. As a result, no validation is needed. Similarly, issues involving control processes are not a concern. \\
+	
 	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM \cite{nexus7}. \\
 	
 	\subsection{Developmental Strategy}
@@ -215,9 +220,9 @@
 		
 		\begin{itemize}
 			\item \textbf{Ruby on Rails} \\
-			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby \cite{rubyonrails}.  
+			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby. It is open source and free. Rails supports web standards such as JSON, or XML for data transfer. Ruby on Rails is a great canidate for the framework team three will use, but team three has more experience with Python then Ruby \cite{rubyonrails}.  
 			\item \textbf{Django} \\
-			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features \cite{django}.
+			Django is a Python built framework and is one the most popular web frameworks. Django has numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features. Django has a very easy learning curve, becuase it is built in Python. The framework is fast, scalable and secure \cite{django}.
 			\item \textbf{Play} \\
 
 			Play is a Java Web framework. Play is based on a lightweight, stateless, web-friendly architecture. It provides predictable and minimal resource consumption (CPU, memory, threads) for highly-scalable applications. This framework is beneficial to team three's solution as their mobile application is also written in Java\cite{play}.
@@ -259,7 +264,12 @@
 		
 	
 \part{Cost}
-The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, the team is unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
+
+The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices. The Nexus 7 tablet's cost averages to be about \$120. The Nexus 7 tablet is a crucial part to this design because we need a device to test our software on. There are Android development studios for developing, but the team needs to make sure that the software will work for production.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used. \\
+	    \begin{itemize}
+	    \item \textbf{Tablet}\\
+		    The Nexus 7 Tablet \$179.90 \cite{nexus7}.\\
+		    \end{itemize}
 \part{Project Management}
 \section{Scheduling}
 		In order to better adapt to the complex requirements defined in Section~\ref{def}, the team has broken the tasks into four iterative cycles. Each cycle is planned to address a number of the design requirements, which must be developed at the same time, due to the highly interconnected nature of the individual subsystems. 
