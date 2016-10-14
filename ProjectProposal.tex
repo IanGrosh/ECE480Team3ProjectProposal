@@ -160,7 +160,7 @@
 	\subsubsection{Mobile User Interface \& Experience}
 	Design Team 3 will create a user interface and experience (UI/UX) to guide the safety inspector through the process of an inspection. In  Figure~\ref{fig:login}, the user is prompted to login so that the data relevant to that user can be synced to the mobile device. By doing so that the inspection results can be recorded under the correct employee's name. \\
 	If the user's device is connected to the internet, they will press the button labeled sync Figure~\ref{fig:splash} which will retrieve the inspection locations and safety device information pertinent to the user.
-	Once the inspector reaches a location they will press the Scan Barcode Location button shown in Figure~\ref{fig:splash}
+	Once the inspector reaches a location they will press the Scan Barcode Location button shown in Figure~\ref{fig:splash}.
 	\begin{figure}[h]
 
 		\begin{minipage}{0.5\textwidth}
@@ -180,17 +180,17 @@
 	\subsubsection{Off-line Mode}
 
 	\subsection{Web Application}
-		In order to allow the Administrators to add safety equipment and inspection questions to the database, assign ownership, and generate reports, Design Team 3 must build a web application. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
+		In order to allow the administrators to add safety equipment and inspection questions to the database, assign ownership, and generate reports, Design team 3 must build a web application. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
 		\\
 		Based on the technical requirements and anticipated need Design Team 3 has devised the following criteria to judge possible choices of web frameworks:
 		\\
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Integrates With Sponsor IT}\\
-			Design Team 3's sponsor ArcelorMittal USA uses a Microsoft Windows based infastructure for their internal IT. We must ensure our choice of framework is compatable in a Microsoft server environment.
+			Design Team 3's sponsor ArcelorMittal USA uses a Microsoft Windows based software for their internal IT. We must ensure our choice of framework is compatible in a Microsoft server environment.
 
 			\item \textbf{Documentation}\\
-			One of the most important parts of any software library is the documentation. If a developer is required to dig through source code to determine how a library works because there are no instructions explaining its implementation, the amount of time which will be required will increase exponentially and will result in code that is more prone to defects.
+			One of the most important parts of any software library is the documentation. If a developer is required to dig through source code to determine how a library works because there are no instructions explaining it's implementation, the amount of time which will be required will increase exponentially and will result in code that is more prone to defects.
 
 			\item \textbf{Ease Of use} \\
 			The complexity of a framework can be quite large which can partially be determined by the framework's programming language. This requires Design Team 3 to determine how difficult standard tasks such as serving a web page, and dynamically creating content will be with each framework considered.
@@ -199,32 +199,35 @@
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Learning curve} \\
+			The learning curve is going to deal with how much we know about said framework, and how fast other people have learned it. To assess the learning curve, we can look at how detailed the tutorials are. If it seems that the tutorial is very complex, that framework is probably not the best for Design Team 3. 
 
 
 			\item \textbf{Stack fullness} \\
+			Stack fullness refers to how well each part of the stack is covered in the proposed framework. Since we are creating a Full Stack application (an application that has a Front End and a Back End), this is going to be very important to consider.
 
 			\item \textbf{Third party Ecosystem}\\
+			The third party ecosystem deals with the integration from our sponsor, AreclorMittal. Team 3 needs to make sure that the product that is made has an easy integration with ArcelorMittal's systems. 
 			
 		\end{itemize}
 		\end{minipage}\\
 		\\
-		Then we chose from the plethora of existing frameworks seven which are cominly used in web app development to compare agents these requirements. The each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
+		Next, we chose from the plethora of existing frameworks. Seven of which are commonly used in web app development to compare against these requirements. Each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
 		
 		\begin{itemize}
 			\item \textbf{Ruby on Rails} \\
 			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby. 
 			\item \textbf{Django} \\
-			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add interesting fetchers.
+			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features.
 			\item \textbf{Play} \\
-			Play is a Java Web framework. This framework as a large appeal for us as we will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful
+			Play is a Java Web framework. This framework as a large appeal for us as we will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful.
 			\item  \textbf{Express}\\
 			Express is a Node.js Web application framework.
 			\item \textbf{Laravel} \\
 			Laravel Is a popular PHP based web framework
 			\item \textbf{Revel} \\
-			Revel is the go language web framework. As with many things in go there is one right way to do something and this is it.
-			\item \textbf{TurboGears}
-			Next generation python web framework. Taking cues from frameworks like Django and Rails this framework uses advanced python and other languages to build a web app.
+			Revel is the Go language web framework. With the Go language, utilizing the Revel Framework is the most appropriate path to take. 
+			\item \textbf{TurboGears}\\
+			This is a next generation Python web framework. Taking cues from frameworks like Django and Rails, this framework uses advanced Python and other languages to build a web app.
 		\end{itemize}
 		
 		
@@ -254,7 +257,7 @@
 		
 	
 \part{Cost}
-The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, we are unable to use one of the sponsor owns devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
+The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
 \part{Project Management}
 \section{Scheduling}
 		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planed to address a number of the design requirements which must be develop in or near parallel do to the highly interconnected nature of the individual subsystems. 
