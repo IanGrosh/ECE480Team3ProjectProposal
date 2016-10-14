@@ -34,9 +34,9 @@
 	Criteria that can be used to rank feasible designs is going to be time. How much time does the proposed action take? How well is the proposed design documented? Solutions supporting simple, easy to read documentation is preferred by team 3. \\
 	Trade off studies that need be conducted to assess the above concerns are going to be speed of response time, and difficulty to move our software development environment to production.
 	\subsection{Risks}
-	Most risks are going to revolve around the security of our proposed system. This is solved by the implementation on ArcelorMittal's servers. ArcelorMittal has their own security team to ensure that the proposed system once moved to a production environment will be secure. In addition the data we are dealing with is not confidential.That being so, all code will be written in a secure manner, special attention will be paid to SQL queries, and SQLinjections.   
+	Most risks are going to revolve around the security of our proposed system. This is solved by the implementation on ArcelorMittal's servers. ArcelorMittal has their own security team to ensure that the proposed system once moved to a production environment will be secure. In addition the data we are dealing with is not confidential.That being so, all code will be written in a secure manner, special attention will be paid to SQL queries, and SQL injections.   
 	\subsection{Overview of System Models}
-	As the nature of this project is more Software oriented then hardware, developing models for system senors, actuators, interfaces or other principle level system components are not a main concern of Team 3. So as a result, no validation is needed. Similarly, issues involving control processes are not a concern. \\
+	As the nature of this project is more software oriented then hardware, developing models for system senors, actuators, interfaces or other principle level system components are not a main concern of Team 3. So as a result, no validation is needed. Similarly, issues involving control processes are not a concern. \\
 	However, Operating Systems at different interconnections distances is a concern, as our sponsor has a special requirement of no WIFI at certain times when the application is operating. So that is one issue that has to be accomodated. Another issue is going to be the storage on the Nexus 7 tablets. A usual tablet holds up to about 16GB of memory, so we need to make sure that our application is well within that limit.  In addition our software is limited to run on the hardware specfics of the Nexus 7, which are ULP GeForce graphics card, CPU is detailed as Quad Core. There is 1 GB of RAM.   \\
 	
 	SOMEONE CITE THIS PLEASE http://www.gsmarena.com/asus_google_nexus_7-4850.php \\
@@ -45,14 +45,14 @@
 	Team three has picked a bottom up approach. We have chosen to implement the lower levels first. This will be easier for the team three because we can test the database communication first. In addition when we are trying to display data on the user interface, we have an implemented API to make that connection for testing. This is going to be easier then just hard coding data which will not be as efficient.  We also set up the development enviornments for testing. 
 
 \section{High Level Languages}\label{highlevel}
-	\subsection{Langugages}
+	\subsection{Languages}
 	As for compilers on the Back End most things will be written in the programming language Python, which does not have a compiler. For the email service, SMTP python libraries will be used, as well as a couple web framework libraries. The web framework Libraries are provided by Django, which is based off of Python. \\
 	Android Application Development is written in Java which does have a compiler. On the admin side, Jquery, Twitter's Bootstrap will be used for web development.   \\ SOMEWHERE IN HERE REFER TO THE COMPARISIONS DOWN BELOW IN A DIFFERENT FIGURE
 
 
 \part{Technical}
 \section{Project Definition}\label{def}
-	This team has been assigned an industry sponsored project from ArcelorMittal USA, who need a way to track their industrial safety equipment within their buildings In order to build the specified system Team 6 will need to build three primary systems. The first being an Android application for operators to scan bar codes on safety locations and equipment. A web application to allow administrators to specify questions for specific pieces of safety equipment, and furthermore assign responsibility to workers. Finally a server infrastructure will be created to ensure data is held properly and securely, host the web application, connect to the Android app, and generate reports. 
+	This team has been assigned an industry sponsored project from ArcelorMittal USA, who need a way to track their industrial safety equipment within their buildings. In order to build the specified system Team 3 will need to build three primary systems. The first being an Android application for operators to scan bar codes on safety locations and equipment. A web application to allow administrators to specify questions for specific pieces of safety equipment, and furthermore assign responsibility to workers. Finally, a server infrastructure will be created to ensure data is held properly and securely, host the web application, connect to the Android app, and generate reports. 
 			
 	\begin{figure}[h]
 		\centering
@@ -67,9 +67,9 @@
 		\begin{itemize}
 			\item \textbf{Mobile Application}
 			\begin{itemize}
-				\item Off-line Mode
-				\item Bar code Scanning
-				\item Bar code based questions
+				\item Off-line mode
+				\item Barcode scanning
+				\item Barcode based questions
 			\end{itemize}
 			\item \textbf{Sever side Database and middle-ware}
 			\begin{itemize}
@@ -79,10 +79,10 @@
 			\end{itemize}
 			\item\textbf{ Emails \& Reports}
 			\begin{itemize}
-				\item Inform Administrators of:
+				\item Inform administrators of:
 					\subitem Failing devices
-					\subitem Delinquent Inspectors
-				\item Inform Inspectors of:
+					\subitem Delinquent inspectors
+				\item Inform inspectors of:
 					\subitem Upcoming Inspections
 					\subitem Missed Inspections
 			\end{itemize}
@@ -95,16 +95,16 @@
 					\item Add locations to the database
 					\item Add safety equipment types to the database
 					\item Create questions
-					\item Associate Bar codes with:
+					\item Associate barcodes with:
 						\subitem Locations
 						\subitem Safety equipment
-					\item Associate Locations with:
+					\item Associate locations with:
 						\subitem Safety Equipment
 						\subitem Questions
 					\item Associate safety equipment with
 						\subitem Locations
 						\subitem Questions
-					\item Add Questions to reports
+					\item Add questions to reports
 					\item Create timetable for reports
 					\item Add recipient to reports
 				\end{itemize}
@@ -135,11 +135,11 @@
 		From the secondary function Verify Standers we have derived:
 		\begin{itemize}
 			\item Set Requirements:\\
-			In order to Verify Standers the system must be able to set complacence requirements for each location and item which is being tracked by the system.
+			In order to verify standards the system must be able to set complacence requirements for each location and item which is being tracked by the system.
 			\item Set Responsibility:\\
-			In order to Verify Standers the standers are being upheld a person must be assigned Responsibility for a number of locations and items within the system. Once this Responsibility is set the owner can be held accountably for there set of locations and items. 
+			The standards are being upheld a person must be assigned Responsibility for a number of locations and items within the system. Once this Responsibility is set the owner can be held accountably for there set of locations and items. 
 			\item Schedule Checklists:\\
-			so that Standers are verified  checklists should be generated to show those who are responsible for items which items need to be checked to ensure compliance.
+			So that standards are verified  checklists should be generated to show those who are responsible for items which items need to be checked to ensure compliance.
 		\end{itemize}
 		
 	\subsection{Use example}
@@ -151,18 +151,18 @@
 			%\caption{\label{flow1} Database entity relations Diagram}
 		%\end{figure}
 		
+
+
 \section{Technical Design}
-	
+
 	\subsection{Mobile Application}
-	Design team 3 will build a Mobile application for a tablet device which will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the intranet, scan bar codes of locations and safety devices to allow the user to answer a seres of pass fail inspection questions, push question responses back to the database over the sponcers intranet.
+	Design team 3 will build a mobile application for a tablet device which will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the intranet, scan bar codes of locations and safety devices to allow the user to answer a seres of pass fail inspection questions, push question responses back to the database over the sponsor's intranet.
 	\subsubsection{Mobile User Interface \& Experience}
-	Design Team three has comitiond the world renowned user interface and user expereance designer, Trevor Sabo to design a front end for both our mobile and web applications.\\
-	\\
-	Design Team three will create a user interface and expereance(UI/UX) to guide the safety inspector through the proses of an inspection Figure~\ref{fig:login} the user is prompted to enter three payroll number so that the data reverent to that user can be sync to the noble device and so that the inspection results can be logged under the correct employees name.
-	If the users device is connected to the intranet will depress the button labeled sync in Figure~\ref{fig:splash} which will retreve the inspection locations and safety device information pertinent to the user.
-	Once the inspector reaches a location they will depress the Scan Barcode Location button shown in Figure~\ref{fig:splash}
+	Design Team 3 will create a user interface and experience (UI/UX) to guide the safety inspector through the process of an inspection. In  Figure~\ref{fig:login}, the user is prompted to login so that the data relevant to that user can be synced to the mobile device. By doing so that the inspection results can be recorded under the correct employee's name. \\
+	If the user's device is connected to the intranet, they will press the button labeled sync Figure~\ref{fig:splash} which will retreve the inspection locations and safety device information pertinent to the user.
+	Once the inspector reaches a location they will press the Scan Barcode Location button shown in Figure~\ref{fig:splash}
 	\begin{figure}[h]
-		
+
 		\begin{minipage}{0.5\textwidth}
 			\centering
 			\includegraphics{StartPage.png}
@@ -174,37 +174,36 @@
 			\caption{\label{fig:splash}Mock up of splash screen}
 		\end{minipage}
 	\end{figure}
-	
+
 	\subsubsection{Barcode Scanning}
-	
+
 	\subsubsection{Off-line Mode}
-	
+
 	\subsection{Web Application}
-		In order to allow the Administrators to add safety equipment and inspection questions to the database, assassin ownership, set email reminder schedules, and generate reports, Design Team 3 must build a simple web application. In order to do so the design team will use a web app framework to build the fetchers required quickly and robustly.
+		In order to allow the Administrators to add safety equipment and inspection questions to the database, assign ownership, and generate reports, Design Team 3 must build a web application. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
 		\\
-		Based on the technical requirements and anticipated need Design Team 3 has devised the foling criteria to judge possible choses of web frameworks: 
+		Based on the technical requirements and anticipated need Design Team 3 has devised the following criteria to judge possible choices of web frameworks:
 		\\
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Integrates With Sponsor IT}\\
-			Design Team 3's sponsor ArcelorMittal USA uses a Microsoft Windows based infastructure for their internal IT. This is significant because  most of the Internet and so most of the web frameworks are built around UNIX like operating systems such as Linux or free BSD, While many have been built to work in a windows environment we must deterin if that exists and if so how well.
-			
+			Design Team 3's sponsor ArcelorMittal USA uses a Microsoft Windows based infastructure for their internal IT. We must ensure our choice of framework is compatable in a Microsoft server environment.
+
 			\item \textbf{Documentation}\\
-			One of the most important parts of any software library is the documentation, If a developer is required to dig thou source code to determine how a library works because there is no documentation which shows how to use it the amount of time which will be required will increase exponentially and will result in code which is more prow to Constantine defects.
-				
+			One of the most important parts of any software library is the documentation. If a developer is required to dig through source code to determine how a library works because there are no instructions explaining its implementation, the amount of time which will be required will increase exponentially and will result in code that is more prone to defects.
+
 			\item \textbf{Ease Of use} \\
-			The complexity of a framework can be quite large and part of that can be in the langige the framework is writing in. this requires Design Team 3 to determine how difficult stranded tasks such as serving a web parge, and dynamically creating content. By looking at slandered task the overall difficulty of building the full web application will be.	
+			The complexity of a framework can be quite large which can partially be determined by the framework's programming language. This requires Design Team 3 to determine how difficult standard tasks such as serving a web page, and dynamically creating content will be with each framework considered.
 		\end{itemize}
 		\end{minipage}
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Learning curve} \\
-			
-			
+
+
 			\item \textbf{Stack fullness} \\
-			
+
 			\item \textbf{Third party Ecosystem}\\
-			
 			
 		\end{itemize}
 		\end{minipage}\\
