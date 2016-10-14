@@ -23,12 +23,12 @@
 	
 
 \part{Overview of Customer's Requirements}
-\section{Background Research}\label{resarch}
+\section{Background Research}\label{research}
 	There is background research that needs to be implemented to characterize primary hardware and software components that are needed for a successful project. \\
 	\subsection{Assessing Customer Needs}
 	To help define what this research needs to be on, we need to think of the customer's needs, and ponder a person, or group of people that would know the ultimate needs of a user. Team three's sponsor, our primary point of contact, is Jim Lang with ArcelorMittal. Our sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with our system. To assess our customers needs, we need to assess how much time we are saving the user by creating this new safety equipment system. In addition we can measure how much more accurate our system is over their previous design. \\ 
 	\subsection{Design Constraints}
-	With customer needs comes design constraints. One design constraint is time. We have been given one semester to work on this system. Another constraint is going to be cost. We have been given a budget of 500\$ to create this system.\\ 
+	With customer needs comes design constraints. One design constraint is time. We have been given one semester to work on this system. Another constraint is going to be cost. We have been given a budget of \$500 to create this system.\\ 
 	\subsection{Feasibility of Designs}
 	Criteria to judge the feasibility of the design has been outlined by our sponsor ArcelorMittal. We were given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMitall's current implementation of problem, Field ID. To satisfy necessary criteria, our goal is to implement a software-based solution, hence; automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
 	Each set of conceptual designs/variations meets the feasibility criteria. Team three's solution meets the goals of the customer's needs; the proposed solution has been approved by both team sponsor and facilitator. Trade off studies that need be conducted to assess the above concerns are speed of response time, and difficulty to move our software development environment to production. 
@@ -46,7 +46,7 @@
 \section{High Level Languages}\label{highlevel}
 	\subsection{Languages}
 	As for compilers on the Back End most things will be written in the programming language Python, which does not have a compiler. For the email service, SMTP python libraries will be used, as well as a couple web framework libraries. The web framework Libraries are provided by Django, which is based off of Python. \\
-	Android Application Development is written in Java which does have a compiler. On the admin side, Jquery, Twitter's Bootstrap will be used for web development.   \\ SOMEWHERE IN HERE REFER TO THE COMPARISIONS DOWN BELOW IN A DIFFERENT FIGURE
+	Android Application Development is written in Java which does have a compiler. On the administrator side, Jquery, Twitter's Bootstrap will be used for web development.   \\ SOMEWHERE IN HERE REFER TO THE COMPARISIONS DOWN BELOW IN A DIFFERENT FIGURE
 
 
 \part{Technical}
@@ -82,8 +82,8 @@
 					\subitem Failing devices
 					\subitem Delinquent inspectors
 				\item Inform inspectors of:
-					\subitem Upcoming Inspections
-					\subitem Missed Inspections
+					\subitem Upcoming inspections
+					\subitem Missed inspections
 			\end{itemize}
 		\end{itemize}
 	\end{minipage}
@@ -98,7 +98,7 @@
 						\subitem Locations
 						\subitem Safety equipment
 					\item Associate locations with:
-						\subitem Safety Equipment
+						\subitem Safety equipment
 						\subitem Questions
 					\item Associate safety equipment with
 						\subitem Locations
@@ -120,18 +120,20 @@
 		The Primary function for the project is \textbf{Ensure Compliance} This is the main goal of the system we have been commissioned to build. From our primary function are derived two secondary functions each having there own tertiary functions:
 		\begin{itemize}
 			\item Verify Standards:\\
-			In order to Ensure Compliance with all pertinent safety regulations the system must be able to check the and verify that all the stranded are being upheld in the various locations and across the numerous safety devices.
+			In order to ensure compliance with all pertinent safety regulations the system must be able to check the and verify that all the stranded are being upheld in the various locations and across the numerous safety devices.
 			\item Keep Records:\\
 			In order to ensure that all of the safety laws and regulations are followed we must keep records of all the locations which must have safety equipment present in a building, what safety equipment must be present, and how to verify that it is in working condition.  
 
-			\item Other 
+			\item Recognize Failures:\\
+			In order to recognize failures, we need to recognize when a piece of safety equipment is not in compliance. This could mean a variety of things, the equipment could not pass the safety inspections, or the equipment could not be present.   
+
 		\end{itemize}
 		From the secondary function Keep Records we have derived: 
 		\begin{itemize}
 			\item Generate Reports:\\
 			In order to keep records and ensure that every location and item is in compliance the system must be able to generate reports on any set of data on which record are kept. 
 		\end{itemize}
-		From the secondary function Verify Standers we have derived:
+		From the secondary function Verify Standards we have derived:
 		\begin{itemize}
 			\item Set Requirements:\\
 			In order to verify standards the system must be able to set complacence requirements for each location and item which is being tracked by the system.
@@ -155,9 +157,9 @@
 \section{Technical Design}
 
 	\subsection{Mobile Application}
-	Design team 3 will build a mobile application for a tablet device which will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the internet, scan bar codes of locations and safety devices to allow the user to answer a series of pass fail inspection questions, push question responses back to the database over the sponsor's internet. This last data push to the database will be completed when the user gets back to their desk, where there is WIFI available.
+	Design team three will build a mobile application for a tablet device which will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the internet, scan bar codes of locations and safety devices to allow the user to answer a series of pass fail inspection questions, push question responses back to the database over the sponsor's internet. This last data push to the database will be completed when the user gets back to their desk, where there is WIFI available.
 	\subsubsection{Mobile User Interface \& Experience}
-	Design Team 3 will create a user interface and experience (UI/UX) to guide the safety inspector through the process of an inspection. In  Figure~\ref{fig:login}, the user is prompted to login so that the data relevant to that user can be synced to the mobile device. By doing so that the inspection results can be recorded under the correct employee's name. \\
+	Design team three will create a user interface and experience (UI/UX) to guide the safety inspector through the process of an inspection. In  Figure~\ref{fig:login}, the user is prompted to login so that the data relevant to that user can be synced to the mobile device. By doing so that the inspection results can be recorded under the correct employee's name. \\
 	If the user's device is connected to the internet, they will press the button labeled sync Figure~\ref{fig:splash} which will retrieve the inspection locations and safety device information pertinent to the user.
 	Once the inspector reaches a location they will press the Scan Barcode Location button shown in Figure~\ref{fig:splash}.
 	\begin{figure}[h]
@@ -175,47 +177,45 @@
 	\end{figure}
 
 	\subsubsection{Barcode Scanning}
-
+	The user will scan the barcode with the Android Application created. After successful scan, questions will pop up that need to be answered. On the event of a non-successful scan, a manual barcode insertion will be needed. The barcode Scanning is done with a ZXing library (Zebra Crossing), and is open source and very well documented.Through testing we have found that this library produces a very reliable, accurate scanner and is perfect for the design specifications.\\
+	In comparasion, the Google Barcode  image recognition software was not quite what we wanted. It is not open source, but it was free. We choose the ZXing library because it was easier to use.
 	\subsubsection{Off-line Mode}
+	The Android Application will be able to run without WIFI. This is very important because at the time of the scan, there will be no WIFI. Data collected from inspections will be stored locally on the tablet until wifi is available for sync. 
 
 	\subsection{Web Application}
-		In order to allow the administrators to add safety equipment and inspection questions to the database, assign ownership, and generate reports, Design team 3 must build a web application. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
+		Administrators need to be able to add safety equipment and inspection questions to the database, assign ownership, and generate reports. Design team three must build a web application to satisfy that requirement. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
 		\\
 		Based on the technical requirements and anticipated need Design Team 3 has devised the following criteria to judge possible choices of web frameworks:
 		\\
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Integrates With Sponsor IT}\\
-<<<<<<< HEAD
-			Design Team 3's sponsor ArcelorMittal USA uses a Microsoft Windows based infrastructure for their internal IT. We must ensure our choice of framework is compatible in a Microsoft server environment.
-=======
-			Design Team 3's sponsor ArcelorMittal USA uses a Microsoft Windows based software for their internal IT. We must ensure our choice of framework is compatible in a Microsoft server environment.
->>>>>>> 41aa98766746a035e20e50dffd3364187cbe6364
+			Design team three's sponsor ArcelorMittal, uses a Microsoft Windows based software for their internal IT. We must ensure our choice of framework is compatible in a Microsoft server environment.
 
 			\item \textbf{Documentation}\\
 			One of the most important parts of any software library is the documentation. If a developer is required to dig through source code to determine how a library works because there are no instructions explaining it's implementation, the amount of time which will be required will increase exponentially and will result in code that is more prone to defects.
 
-			\item \textbf{Ease Of use} \\
-			The complexity of a framework can be quite large which can partially be determined by the framework's programming language. This requires Design Team 3 to determine how difficult standard tasks such as serving a web page, and dynamically creating content will be with each framework considered.
+			\item \textbf{Ease Of Use} \\
+			The complexity of a framework can be quite large which can partially be determined by the framework's programming language. This requires design team three to determine how difficult standard tasks such as serving a web page, and dynamically creating content will be with each framework considered.
 		\end{itemize}
 		\end{minipage}
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
-			\item \textbf{Learning curve} \\
+			\item \textbf{Learning Curve} \\
 			The learning curve is going to deal with how much we know about said framework, and how fast other people have learned it. To assess the learning curve, we can look at how detailed the tutorials are. If it seems that the tutorial is very complex, that framework is probably not the best for Design Team 3. 
 
 
-			\item \textbf{Stack fullness} \\
+			\item \textbf{Stack Fullness} \\
 			Stack fullness refers to how well each part of the stack is covered in the proposed framework. Since we are creating a Full Stack application (an application that has a Front End and a Back End), this is going to be very important to consider.
 
-			\item \textbf{Third party Ecosystem}\\
+			\item \textbf{Third Party Ecosystem}\\
 			The third party ecosystem deals with the integration from our sponsor, AreclorMittal. Team 3 needs to make sure that the product that is made has an easy integration with ArcelorMittal's systems. 
 			
 		\end{itemize}
 		\end{minipage}\\
 		\\
 
-		Next, we chose from the plethora of existing frameworks. Seven of which are commonly used in web app development to compare against these requirements. Each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
+		Next, we chose from the plethora of existing frameworks. Seven of which are commonly used in web application development to compare against these requirements. Each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
 		
 		\begin{itemize}
 			\item \textbf{Ruby on Rails} \\
@@ -229,7 +229,7 @@
 			\item \textbf{Laravel} \\
 			Laravel Is a popular PHP based web framework
 			\item \textbf{Revel} \\
-			Revel is the Go language web framework. With the Go language, utilizing the Revel Framework is the most appropriate path to take. 
+			Revel is the Go language web framework. With the Go language, utilizing the Revel framework is the most appropriate path to take. 
 			\item \textbf{TurboGears}\\
 			This is a next generation Python web framework. Taking cues from frameworks like Django and Rails, this framework uses advanced Python and other languages to build a web app.
 		\end{itemize}
@@ -264,30 +264,30 @@
 The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
 \part{Project Management}
 \section{Scheduling}
-		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planed to address a number of the design requirements which must be develop in or near parallel do to the highly interconnected nature of the individual subsystems. 
+		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planned to address a number of the design requirements, which must be developed at the same time, due to the highly interconnected nature of the individual subsystems. 
 		
 		
 	\subsection{Preliminary Set Up}\label{cyc1}
-		In the first cycle the team pursues actions which move to the understanding of the finer details of the system it has been tasked to build. This cycle includes several instances of contact with the sponsor in order to both better understand the customers needs and build a relationship for ongoing communication. At the end of this cycle the team will deliver a project proposal to the faculty advisor and the project sponsor along with having verified that the most basic functionality of the database, web application, Android application and design mock-ups. 
+		In the first cycle the team pursues actions which move to the understanding of the finer details of the system it has been tasked to build. This cycle includes several instances of contact with the sponsor in order to both better understand the customer's needs and build a relationship for ongoing communication. At the end of this cycle the team will deliver a project proposal to the faculty advisor and the project sponsor along with verifying the basic functionality of the database, web application, Android application and design mock-ups. 
 		
 		\begin{itemize}
 			\item\textbf{Meet with Sponsor:} (The Team)\\
-			The team prepares questions and meets in person with the Jim Lang from ArcelorMittal. In order to better understand the needs defined in the project description. In this meeting the project sponsor was asked to describe key features and furthermore, what a successfully project looked like.
+			The team prepares questions and meets in person with the ArcelorMittal sponsor. In order to better understand the needs defined in the project description. In this meeting the project sponsor was asked to describe key features and furthermore, what a successful project looked like.
 			
 			\item \textbf{Solidify Understanding of Project:} (The Team)\\
-			In this task the Team meets to discuss what was learned in the meeting with the project sponsor previously. In order to layout the framework in which the team can build the requested system.
+			In this task, the team meets to discuss what was learned in the meeting with the project sponsor previously. This assisted the team to build the requested system, because notes were taken immediately after the meeting to ensure nothing was left out. 
 			
 			\item\textbf{Additional Questions for Sponsor:} (The Team)\\
-			After exhaustive discussion on the both the high level work flows and technical feasibility of the project the team will compose a set of questions to be electronically mailed to the project sponsor in order to clear up lingering discontinuity in the teams understanding of the system.
+			After exhaustive discussion on the both the high level work flows and technical feasibility of the project, the team will compose a set of questions to be electronically mailed to the project sponsor in order to clear up lingering discontinuity in the teams understanding of the system.
 			
 			\item\textbf{Set up Database:} (Alexandria \& Ian)\\
-			In this task two team members will decide on a framework for building the server side infrastructure for the system. This will include choosing and setting up the server operating system, choosing the main programing language to be used for building the sever infrastructure.
+			In this task,  two team members will decide on a framework for building the server side infrastructure for the system. This will include choosing and setting up the server operating system, choosing the main programing language to be used for building the sever infrastructure.
 			
 			\item\textbf{Hello World on Tablet:} (Kyle)\\
-			In this task a team member will build a simple hello world program for style of android tablet indicated by the project sponsor. In building a hello world program for the tablet the team member will also choose a library for decoding bar codes using the tablet camera. 
+			In this task a team member will build a simple hello world program for style of Android tablet indicated by the project sponsor. In building a hello world program for the tablet the team member will also choose a library for decoding bar codes using the tablet camera. 
 			
 			\item\textbf{Draw Mock ups:} (Trevor)\\
-			In this task a team member will draw the initial designs for the user experiences that will be had in the various user portals of the system so that the project sponsor can have an idea of what the user interface will be like and can give us insights that will help all aspects of the teams design. 
+			In this task a team member will draw the initial designs for the user experiences that will be had in the various user portals of the system so that the project sponsor can have an idea of what the user interface will be like and can give us insights that will help all aspects of the team's design. 
 			
 			\item\textbf{Set up Web Page:} (Seth)\\
 			In this task a team member will setup an initial front end for the administrator web sight. The team member will decide on a set of predefined web objects that can be used to build web applications which will best allows the team to build an effective web application front end. 
@@ -299,10 +299,10 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 		
 		
 	\subsection{Interconnectivity}\label{connect}
-		In the Interconnectivity step design team 3 will focus on building and testing connections between the baseline system, setup in \ref{cyc1}
+		In the interconnectivity step, design team three will focus on building and testing connections between the baseline system, setup in section \ref{cyc1}.
 		\begin{itemize}
 			\item\textbf{Web speaks to Database:} (Seth)\\
-			This step will consist of establishing a connection between the existing front-end of the admin website developed in 3.1 and the database that will allow the admin site to read from and write to the database.  This functionality will be used for retrieving and modifying information regarding the whereabouts and inspection status of safety equipment. 
+			This step will consist of establishing a connection between the existing front-end of the administrator website developed in section \ref{scope} and the database that will allow the administrator site to read from and write to the database.  This functionality will be used for retrieving and modifying information regarding the whereabouts and inspection status of safety equipment. 
 
 			
 			\item \textbf{Mobile speaks to Database:} (Kyle)\\
@@ -313,7 +313,7 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 
 			
 			\item\textbf{Mock ups and Wire Frames:} (Trevor)\\
-			The user interface of the mobile application and the admin website will be modified after receiving sponsor feedback regarding their current design to better suit the needs and wants of the customer.
+			The user interface of the mobile application and the administrator website will be modified after receiving sponsor feedback regarding their current design to better suit the needs and wants of the customer.
 			
 			
 		\end{itemize}
@@ -321,16 +321,16 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 		\subsection{Preliminary Application Development}\label{dev1}
 		
 		\begin{itemize}
-			\item\textbf{Mobile App Development:} (Kyle)\\
+			\item\textbf{Mobile Application Development:} (Kyle)\\
 		The implementation of the mobile application will be completed during this phase to produce a fully functioning prototype that is able to scan a barcode and pull information from the database related to that barcode.  The application will then be able to upload inspection results of each item over a WIFI network to the central database.\\		
-			\item \textbf{Web App Development:} (Seth and Ally)\\
-			The front-end and back-end of the admin website will be completed during this phase to produce an initial prototype.  The admin website will be able to receive input from a user regarding barcode and their related specifications and post that information to the database to be used by the mobile application.  This development is to be done in parallel with the mobile application.\\
+			\item \textbf{Web Application Development:} (Seth and Alexandria)\\
+			The front-end and back-end of the administrator website will be completed during this phase to produce an initial prototype.  The administrator website will be able to receive input from a user regarding barcode and their related specifications and post that information to the database to be used by the mobile application.  This development is to be done in parallel with the mobile application.\\
 
-			\item\textbf{Database Refinements:} (Ian and Ally)\\
-			The database will be continually refined throughout the development of the admin website and mobile application to address any issues discovered during this development phase.\\
+			\item\textbf{Database Refinements:} (Ian and Alexandria)\\
+			The database will be continually refined throughout the development of the administrator website and mobile application to address any issues discovered during this development phase.\\
 			
 			\item\textbf{Feedback:} (The Team)\\
-			The team will demonstrate the functioning prototype of both the mobile application and admin website to the sponsor and show how they integrate together to achieve a solution to the original problem.  The team will discuss the sponsor’s opinion regarding pros and cons of the implementation and create a plan for any modifications that the customer desires.\\
+			The team will demonstrate the functioning prototype of both the mobile application and administrator website to the sponsor and show how they integrate together to achieve a solution to the original problem.  The team will discuss the sponsor’s opinion regarding pros and cons of the implementation and create a plan for any modifications that the customer desires.\\
 			
 			\item\textbf{New Mock ups:} (Trevor)\\
 			Modification to the user interface design will be made if the sponsor desires.
@@ -340,16 +340,16 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 	\subsection{Secondary Application Development}\label{dev2}
 		
 		\begin{itemize}
-			\item\textbf{Mobile App Development:} (Kyle)\\
-			Any desired design modifications to the mobile application requested by the sponsor in 3.3 will be implemented and tested in this phase. \\
-			\item \textbf{Web App Development:} (Seth and Ally)\\
-			Any desired design modifications to the admin website requested by the sponsor in 3.3 will be implemented and tested in this phase. \\
+			\item\textbf{Mobile Application Development:} (Kyle)\\
+			Any desired design modifications to the mobile application requested by the sponsor in section \ref{custneeds} will be implemented and tested in this phase. \\
+			\item \textbf{Web Application Development:} (Seth and Alexandria)\\
+			Any desired design modifications to the administrator website requested by the sponsor in section \ref{custneeds} will be implemented and tested in this phase. \\
 			
-			\item\textbf{Database Refinements:} (Ally)\\
-			Any necessary database changes needed to accommodate modifications made to the mobile application or admin website will be implemented. \\
+			\item\textbf{Database Refinements:} (Alexandria)\\
+			Any necessary database changes needed to accommodate modifications made to the mobile application or administrator website will be implemented. \\
 			
 			\item\textbf{Make project shippable to sponsor:} (The Team)\\
-			The mobile application will be compiled into an executable that can be uploaded on the sponsor’s tablets.  All passwords necessary to access the admin website will be given to the sponsor along with the source code for the website so that the website may be uploaded and hosted wherever the sponsor desires. 
+			The mobile application will be compiled into an executable that can be uploaded on the sponsor’s tablets.  All passwords necessary to access the administrator website will be given to the sponsor along with the source code for the website so that the website may be uploaded and hosted wherever the sponsor desires. 
 
 			
 		\end{itemize}
