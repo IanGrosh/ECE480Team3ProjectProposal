@@ -1,4 +1,5 @@
 \documentclass[Letter,11pt]{article}
+\usepackage{url}
 \input{seting_etc.tex}
 
 \begin{document}
@@ -11,16 +12,7 @@
 			\listoftables
 			\endgroup
 			\newpage
-	%make the abstract
-	\begin{abstract}
-		Team three has been asked to create a system to keep track of safety equipment on ArcelorMittal's buildings. To do this the team needs to build some systems. These systems will enable administrators to both monitor compliance standards on areas they are in charge of, and make sure that safety equipment is being properly checked and documented. Reports will be sent out periodically on the above to said administrators.  On the user end, an Android application  that uses a scanner will be created that will enable users to quickly answer questions on safety equipment standards.  This project proposal is broken into the following parts:
-		\begin{enumerate}
-			\item The teams current understanding of the project.
-			\item Define the project in such a way that it will be easy to follow for developers that are maintaining the project for years to come.
-			\item Demonstrate that the team has internalized the design challenge faced.
-		\end{enumerate}
-	\end{abstract}
-	
+
 
 \part{Overview of Customer's Requirements}
 \section{Background Research}\label{research}
@@ -41,10 +33,7 @@
 	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
 	\subsection{Overview of System Models}
 	As the nature of this project is more software oriented then hardware, developing models for system senors, actuators, interfaces or other principle level system components are not a concern. As a result, no validation is needed. Similarly, issues involving control processes are not a concern. \\
-	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM. \\
-	
-	\cite{nexus7}
-	SOMEONE CITE THIS PLEASE http://www.gsmarena.com/asus_google_nexus_7-4850.php \\
+	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM \cite{nexus7}. \\
 	
 	\subsection{Developmental Strategy}
 	Team three has picked a bottom-up approach. Team three will implement lower levels specifics at highest level of importance. This gives the team the ability to test database communication first. Further, when fusing data into the user interface, the API's implemented create connections for testing. This allows the team to efficiently design an experience while minimizing on constraints. Developmental tools for the environments will also be utilized for testing. \\ 
@@ -226,19 +215,21 @@
 		
 		\begin{itemize}
 			\item \textbf{Ruby on Rails} \\
-			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby. 
+			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby \cite{rubyonrails}.  
 			\item \textbf{Django} \\
-			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features.
+			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features \cite{django}.
 			\item \textbf{Play} \\
-			Play is a Java Web framework. This framework as a large appeal for us as the team will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful.
+
+			Play is a Java Web framework. This framework as a large appeal for us as we will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful \cite{play}.
 			\item  \textbf{Express}\\
-			Express is a Node.js Web application framework.
+			Express is a Node.js Web application framework \cite{express}.
 			\item \textbf{Laravel} \\
-			Laravel Is a popular PHP based web framework
+			Laravel is a popular PHP based web framework \cite{laravel}. 
 			\item \textbf{Revel} \\
-			Revel is the Go language web framework. With the Go language, utilizing the Revel framework is the most appropriate path to take. 
+			Revel is the Go language web framework. With the Go language, utilizing the Revel framework is the most appropriate path to take \cite{revel}.
 			\item \textbf{TurboGears}\\
-			This is a next generation Python web framework. Taking cues from frameworks like Django and Rails, this framework uses advanced Python and other languages to build a web application.
+
+			This is a next generation Python web framework. Taking cues from frameworks like Django and Rails, this framework uses advanced Python and other languages to build a web app \cite{turbogears}.
 		\end{itemize}
 		
 		
