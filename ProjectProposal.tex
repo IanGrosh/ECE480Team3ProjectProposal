@@ -1,4 +1,5 @@
 \documentclass[Letter,11pt]{article}
+\usepackage{url}
 \input{seting_etc.tex}
 
 \begin{document}
@@ -12,27 +13,34 @@
 			\endgroup
 			\newpage	
 
+
 \part{Overview of Customer's Requirements}
 \section{Background Research}\label{research}
 	There is background research that needs to be implemented to characterize primary hardware and software components that are needed for a successful project. \\
 	\subsection{Assessing Customer Needs}
 
-	In order to assess the customer's need the team must first understand the problem.
+	The customer's needs, as well as the needs of their users, are team three's highest priority. Team three's sponsor, our primary point of contact, is Jim Lang with ArcelorMittal. Our sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with the system. Team three's customer's needs are clearly documented by ArcelorMittal. This documentation assess the needs and interests of the ultimate user. \\ 
 
-	To help define what this research needs to be on, we need to think of the customer's needs, and ponder a person, or group of people that would know the ultimate needs of a user. Team three's sponsor, our primary point of contact, is Jim Lang with ArcelorMittal. Our sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with our system. To assess our customers needs, we need to assess how much time we are saving the user by creating this new safety equipment system. In addition we can measure how much more accurate our system is over their previous design. \\ 
+
 	\subsection{Design Constraints}
-	With customer needs comes design constraints. One design constraint is time. We have been given one semester to work on this system. Another constraint is going to be cost. We have been given a budget of \$500 to create this system.\\ 
+	With customer needs comes design constraints. The first design constraint is time. Team three has been given one semester to deliver a complete solution. Another constraint is cost. Team three has been given a budget of \$500 to create this system.\\
+
+
 	\subsection{Feasibility of Designs}
-	Criteria to judge the feasibility of the design has been outlined by team three's sponsor ArcelorMittal. We were given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMitall's current implementation of problem, Field ID. To satisfy necessary criteria, team three's goal is to implement a software-based solution, hence; automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
+	Criteria to judge the feasibility of the design has been outlined by team three's sponsor ArcelorMittal. Team three was given requirements necessary for designing and implementing a Minimum Viable Product. The requirements are based on ArcelorMittal's current implementation of problem, Field ID. To satisfy necessary criteria, team three's goal is to implement a software-based solution, hence; automating the entire process. Ultimately feasibility will be judged based on universal usability. In order to rank the feasible designs, team three must also consider criteria based on speed of response time, organization of documentation, report generation, and ability to publish software development environment into production. \\
 	Each set of conceptual designs/variations meets the feasibility criteria. Team three's solution meets the goals of the customer's needs; the proposed solution has been approved by both team sponsor and facilitator. Trade off studies that need be conducted to assess the above concerns are speed of response time, and difficulty to move team three's software development environment to production. In a software environment, feasible conceptual designs are always subjected to change. \\
 	\subsection{Risks}
 	A majority of risks revolve around the security of team three's proposed system. This is solved by the implementation and integration on ArcelorMittal's servers. Due to safety and liability restrictions, team three is unable to gain access to ArcelorMittal systems; most specifically their database. Team three's solution is designed to integrated into ArcelorMittal's existing system. \\
 	\subsection{Overview of System Models}
 	As the nature of this project is more software oriented then hardware, developing models for system senors, actuators, interfaces or other principle level system components are not a concern. As a result, no validation is needed. Similarly, issues involving control processes are not a concern. \\
+
 	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM. \\
 	
 	\cite{nexus7}
 	SOMEONE CITE THIS PLEASE http://www.gsmarena.com/asus\_google\_nexus\_7-4850.php \\
+
+	However, Operating Systems at different interconnections distances is a concern. ArcelorMittal has a special requirement that team three's mobile application must operate without WIFI; this issue must be accommodated. Additionally storage on the Nexus 7 tablet is also a concern. A limit of 16GB of memory is crucial; therefore, team three's application must be well within that limit.  Finally, the software must be compatible with hardware specifics of the Nexus 7, which are a ULP GeForce graphics card, Quad Core processors, and 1GB of RAM \cite{nexus7}. \\
+>>>>>>> origin/master
 	
 	\subsection{Developmental Strategy}
 	Team three has picked a bottom-up approach. Team three will implement lower levels specifics at highest level of importance. This gives the team the ability to test database communication first. Further, when fusing data into the user interface, the API's implemented create connections for testing. This allows the team to efficiently design an experience while minimizing on constraints. Developmental tools for the environments will also be utilized for testing. \\ 
@@ -45,7 +53,7 @@
 
 \part{Technical}
 \section{Project Definition}\label{def}
-	This team has been assigned an industry sponsored project from ArcelorMittal USA, who need a way to track their industrial safety equipment within their buildings. In order to build the specified system Team 3 will need to build three primary systems. The first being an Android application for operators to scan bar codes on safety locations and equipment. A web application to allow administrators to specify questions for specific pieces of safety equipment, and furthermore assign responsibility to workers. Finally, a server infrastructure will be created to ensure data is held properly and securely, host the web application, connect to the Android app, and generate reports. 
+	This team has been assigned an industry sponsored project from ArcelorMittal, who need a way to track their industrial safety equipment within their buildings. In order to build the specified system team three will need to build three primary systems. The first being an Android application for operators to scan barcodes on safety locations and equipment. A web application to allow administrators to specify questions for specific pieces of safety equipment, and furthermore assign responsibility to workers. Finally, a server infrastructure will be created to ensure data is held properly and securely, host the web application, connect to the Android application, and generate reports. 
 			
 	\begin{figure}[h]
 		\centering
@@ -68,7 +76,7 @@
 			\begin{itemize}
 				\item Host:
 					\subitem Web application
-					\subitem Database API for mobile app
+					\subitem Database API for mobile application
 			\end{itemize}
 			\item\textbf{ Emails \& Reports}
 			\begin{itemize}
@@ -116,18 +124,18 @@
 			\item Verify Standards:\\
 			In order to ensure compliance with all pertinent safety regulations the system must be able to check the and verify that all the stranded are being upheld in the various locations and across the numerous safety devices.
 			\item Keep Records:\\
-			In order to ensure that all of the safety laws and regulations are followed we must keep records of all the locations which must have safety equipment present in a building, what safety equipment must be present, and how to verify that it is in working condition.  
+			In order to ensure that all of the safety laws and regulations are followed the team must keep records of all the locations which must have safety equipment present in a building, what safety equipment must be present, and how to verify that it is in working condition.  
 
 			\item Recognize Failures:\\
-			In order to recognize failures, we need to recognize when a piece of safety equipment is not in compliance. This could mean a variety of things, the equipment could not pass the safety inspections, or the equipment could not be present.   
+			In order to recognize failures, the team needs to recognize when a piece of safety equipment is not in compliance. This could mean a variety of things, the equipment could not pass the safety inspections, or the equipment could not be present.   
 
 		\end{itemize}
-		From the secondary function Keep Records we have derived: 
+		From the secondary function Keep Records the team has derived: 
 		\begin{itemize}
 			\item Generate Reports:\\
 			In order to keep records and ensure that every location and item is in compliance the system must be able to generate reports on any set of data on which record are kept. 
 		\end{itemize}
-		From the secondary function Verify Standards we have derived:
+		From the secondary function Verify Standards the team has derived:
 		\begin{itemize}
 			\item Set Requirements:\\
 			In order to verify standards the system must be able to set complacence requirements for each location and item which is being tracked by the system.
@@ -145,13 +153,14 @@
 			%\input{flow1.tex}
 			%\caption{\label{flow1} Database entity relations Diagram}
 		%\end{figure}
+
 		
 
 
 \section{Technical Design}
 
 	\subsection{Mobile Application}
-	Design team three will build a mobile application for a tablet device which will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the internet, scan bar codes of locations and safety devices to allow the user to answer a series of pass fail inspection questions, push question responses back to the database over the sponsor's internet. This last data push to the database will be completed when the user gets back to their desk, where there is WIFI available.
+	Design team three will build a mobile application for a tablet device which will allow a user to: download a database of safety equipment and locations to the mobile device to allow the user to operate with out access to the internet, scan barcodes of locations and safety devices to allow the user to answer a series of pass fail inspection questions, push question responses back to the database over the sponsor's internet. This last data push to the database will be completed when the user gets back to their desk, where there is WIFI available.
 	\subsubsection{Mobile User Interface \& Experience}
 	Design team three will create a user interface and experience (UI/UX) to guide the safety inspector through the process of an inspection. In  Figure~\ref{fig:login}, the user is prompted to login so that the data relevant to that user can be synced to the mobile device. By doing so that the inspection results can be recorded under the correct employee's name. \\
 	If the user's device is connected to the internet, they will press the button labeled sync Figure~\ref{fig:splash} which will retrieve the inspection locations and safety device information pertinent to the user.
@@ -171,8 +180,8 @@
 	\end{figure}
 
 	\subsubsection{Barcode Scanning}
-	The user will scan the barcode with the Android Application created. After successful scan, questions will pop up that need to be answered. On the event of a non-successful scan, a manual barcode insertion will be needed. The barcode Scanning is done with a ZXing library (Zebra Crossing), and is open source and very well documented.Through testing we have found that this library produces a very reliable, accurate scanner and is perfect for the design specifications.\\
-	In comparasion, the Google Barcode  image recognition software was not quite what we wanted. It is not open source, but it was free. We choose the ZXing library because it was easier to use.
+	The user will scan the barcode with the Android Application created. After successful scan, questions will pop up that need to be answered. On the event of a non-successful scan, a manual barcode insertion will be needed. The barcode scanning is done with a ZXing library (Zebra Crossing), and is open source and very well documented. Through testing we have found that this library produces a very reliable, accurate scanner and is perfect for the design specifications.\\
+	In comparison, the Google Barcode  image recognition software was not quite what the team wanted. It is not open source, but it was free. Team three choose the ZXing library because it was easier to use.
 	\subsubsection{Off-line Mode}
 	The Android Application will be able to run without WIFI. This is very important because at the time of the scan, there will be no WIFI. Data collected from inspections will be stored locally on the tablet until wifi is available for sync. 
 
@@ -184,7 +193,7 @@
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Integrates With Sponsor IT}\\
-			Design team three's sponsor ArcelorMittal, uses a Microsoft Windows based software for their internal IT. We must ensure our choice of framework is compatible in a Microsoft server environment.
+			Design team three's sponsor ArcelorMittal, uses a Microsoft Windows based software for their internal IT. The team must ensure our choice of framework is compatible in a Microsoft server environment.
 
 			\item \textbf{Documentation}\\
 			One of the most important parts of any software library is the documentation. If a developer is required to dig through source code to determine how a library works because there are no instructions explaining it's implementation, the amount of time which will be required will increase exponentially and will result in code that is more prone to defects.
@@ -196,11 +205,11 @@
 		\begin{minipage}[t]{0.5\textwidth}
 		\begin{itemize}
 			\item \textbf{Learning Curve} \\
-			The learning curve is going to deal with how much we know about said framework, and how fast other people have learned it. To assess the learning curve, we can look at how detailed the tutorials are. If it seems that the tutorial is very complex, that framework is probably not the best for Design Team 3. 
+			The learning curve is going to deal with how much the team knows about said framework, and how fast other people have learned it. To assess the learning curve, the team must take advantage of software libraries and documentation. If it seems that the tutorial is very complex, that framework is probably not the best for the team. 
 
 
 			\item \textbf{Stack Fullness} \\
-			Stack fullness refers to how well each part of the stack is covered in the proposed framework. Since we are creating a Full Stack application (an application that has a Front End and a Back End), this is going to be very important to consider.
+			Stack fullness refers to how well each part of the stack is covered in the proposed framework. Since the team is creating a Full Stack application (an application that has a Front End and a Back End), this is going to be very important to consider.
 
 			\item \textbf{Third Party Ecosystem}\\
 			The third party ecosystem deals with the integration from our sponsor, AreclorMittal. Team 3 needs to make sure that the product that is made has an easy integration with ArcelorMittal's systems. 
@@ -209,23 +218,25 @@
 		\end{minipage}\\
 		\\
 
-		Next, we chose from the plethora of existing frameworks. Seven of which are commonly used in web application development to compare against these requirements. Each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
+		Next, the team must chose from the plethora of existing frameworks. Seven of which are commonly used in web application development to compare against these requirements. Each criteria is marked on a log scale of ether 1,3, or 9 and displayed in Table~\ref{WebMatrix}.
 		
 		\begin{itemize}
 			\item \textbf{Ruby on Rails} \\
-			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby. 
+			Ruby on Rails is a web framework also known as Rails built in the programming language Ruby \cite{rubyonrails}.  
 			\item \textbf{Django} \\
-			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features.
+			Django is a Python built framework and is one the most popular web frameworks. Django is well sported out of the box with numerous built in interfaces and a healthy ecosystem of free and open third-party add-ons to add features \cite{django}.
 			\item \textbf{Play} \\
-			Play is a Java Web framework. This framework as a large appeal for us as we will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful.
+
+			Play is a Java Web framework. This framework as a large appeal for us as we will be writing our Android Application in Java, and there is a huge amount of support for the language which would be helpful \cite{play}.
 			\item  \textbf{Express}\\
-			Express is a Node.js Web application framework.
+			Express is a Node.js Web application framework \cite{express}.
 			\item \textbf{Laravel} \\
-			Laravel Is a popular PHP based web framework
+			Laravel is a popular PHP based web framework \cite{laravel}. 
 			\item \textbf{Revel} \\
-			Revel is the Go language web framework. With the Go language, utilizing the Revel framework is the most appropriate path to take. 
+			Revel is the Go language web framework. With the Go language, utilizing the Revel framework is the most appropriate path to take \cite{revel}.
 			\item \textbf{TurboGears}\\
-			This is a next generation Python web framework. Taking cues from frameworks like Django and Rails, this framework uses advanced Python and other languages to build a web app.
+
+			This is a next generation Python web framework. Taking cues from frameworks like Django and Rails, this framework uses advanced Python and other languages to build a web app \cite{turbogears}.
 		\end{itemize}
 		
 		
@@ -255,7 +266,7 @@
 		
 	
 \part{Cost}
-The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
+	The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
 \part{Project Management}
 \section{Scheduling}
 		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planned to address a number of the design requirements, which must be developed at the same time, due to the highly interconnected nature of the individual subsystems. 
@@ -278,7 +289,7 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 			In this task,  two team members will decide on a framework for building the server side infrastructure for the system. This will include choosing and setting up the server operating system, choosing the main programing language to be used for building the sever infrastructure.
 			
 			\item\textbf{Hello World on Tablet:} (Kyle)\\
-			In this task a team member will build a simple hello world program for style of Android tablet indicated by the project sponsor. In building a hello world program for the tablet the team member will also choose a library for decoding bar codes using the tablet camera. 
+			In this task a team member will build a simple hello world program for style of Android tablet indicated by the project sponsor. In building a hello world program for the tablet the team member will also choose a library for decoding barcodes using the tablet camera. 
 			
 			\item\textbf{Draw Mock ups:} (Trevor)\\
 			In this task a team member will draw the initial designs for the user experiences that will be had in the various user portals of the system so that the project sponsor can have an idea of what the user interface will be like and can give us insights that will help all aspects of the team's design. 
