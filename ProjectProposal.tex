@@ -11,12 +11,24 @@
 			\listoftables
 			\endgroup
 			\newpage
+	%make the abstract
+	\begin{abstract}
+		Design Team 3 has been asked to create a system to keep track of safety equipment on ArcelorMittal's buildings. To do this the team needs to build some systems. These systems will enable administrators to both monitor compliance standards on areas they are in charge of, and make sure that safety equipment is being properly checked and documented. Reports will be sent out periodically on the above to said administrators.  On the user end, an Android application  that uses a scanner will be created that will enable users to quickly answer questions on safety equipment standards.  This project proposal is broken into the following parts:
+		\begin{enumerate}
+			\item The teams current understanding of the project.
+			\item Define the project in such a way that it will be easy to follow for developers that are maintaining the project for years to come.
+			\item Demonstrate that the team has internalized the design challenge faced.
+		\end{enumerate}
+	\end{abstract}
 	
 
 \part{Overview of Customer's Requirements}
 \section{Background Research}\label{research}
 	There is background research that needs to be implemented to characterize primary hardware and software components that are needed for a successful project. \\
-	\subsection{Assessing Customer Needs}\label{custneeds}
+	\subsection{Assessing Customer Needs}
+
+	In order to assess the customer's need the team must first understand the problem.
+
 	To help define what this research needs to be on, we need to think of the customer's needs, and ponder a person, or group of people that would know the ultimate needs of a user. Team three's sponsor, our primary point of contact, is Jim Lang with ArcelorMittal. Our sponsor clearly defines ArcelorMittal's needs, and how the user will be interacting with our system. To assess our customers needs, we need to assess how much time we are saving the user by creating this new safety equipment system. In addition we can measure how much more accurate our system is over their previous design. \\ 
 	\subsection{Design Constraints}
 	With customer needs comes design constraints. One design constraint is time. We have been given one semester to work on this system. Another constraint is going to be cost. We have been given a budget of \$500 to create this system.\\ 
@@ -37,7 +49,7 @@
 \section{High Level Languages}\label{highlevel}
 	\subsection{Languages}
 	As for compilers on the Back End most things will be written in the programming language Python, which does not have a compiler. For the email service, SMTP python libraries will be used, as well as various web framework libraries. The web framework libraries are provided by Django, a high-level Python Web framework. \\
-	Android Application Development is written in Java which does have a compiler. On the administrator side, Jquery, Twitter's Bootstrap will be used for web development.   \\ SOMEWHERE IN HERE REFER TO THE COMPARISIONS DOWN BELOW IN A DIFFERENT FIGURE
+	Android Application Development is written in Java which does have a compiler. On the administrator side, jQuery, Twitter's Bootstrap, will be used for web development.  A detailed implementation can be found in section \ref{WEBAPP}.  \\ 
 
 
 \part{Technical}
@@ -173,7 +185,7 @@
 	\subsubsection{Off-line Mode}
 	The Android Application will be able to run without WIFI. This is very important because at the time of the scan, there will be no WIFI. Data collected from inspections will be stored locally on the tablet until wifi is available for sync. 
 
-	\subsection{Web Application}
+	\subsection{Web Application}\label{WEBAPP}
 		Administrators need to be able to add safety equipment and inspection questions to the database, assign ownership, and generate reports. Design team three must build a web application to satisfy that requirement. In order to do so the design team will use a web application development framework to build the features required quickly and robustly.
 		\\
 		Based on the technical requirements and anticipated need Design Team 3 has devised the following criteria to judge possible choices of web frameworks:
@@ -252,11 +264,7 @@
 		
 	
 \part{Cost}
-The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices. The Nexus 7 tablet's cost averages to be about \$120. The Nexus 7 tablet is a crucial part to this design because we need a device to test our software on. There are Android development studios for developing, but the team needs to make sure that the software will work for production.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used. \\
-		\begin{itemize}
-		\item \textbf{Tablet}\\
-		The Nexus 7 Tablet \$124.94\\
-		\end{itemize}
+The only cost incurred by the design team will be purchasing a Nexus 7 tablet. The tablet will be of the same model and year or similar to the sponsor's devices.  Due to their security measures, we are unable to use one of the sponsor's own devices. To speed up the process of development, a group member has volunteered their Nexus 7 tablet to be used.
 \part{Project Management}
 \section{Scheduling}
 		In order to better adapt to the complex requirements defined in Section~\ref{def}, we have broken the tasks into four iterative cycles. Each cycle is planned to address a number of the design requirements, which must be developed at the same time, due to the highly interconnected nature of the individual subsystems. 
@@ -355,8 +363,5 @@ The only cost incurred by the design team will be purchasing a Nexus 7 tablet. T
 				\caption{\label{fig:gant}Gantt Chart}
 			\end{figure}
 		\end{landscape}
-		
-		%\bibliographystyle{plain}
-		%\bibliography{proposalbib.bib}
-	%	\printbibliography
+	
 \end{document}
